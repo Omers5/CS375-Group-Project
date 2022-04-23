@@ -9,6 +9,11 @@ class HashTable
 		HashTable(int sizeIn)
 		{
 			tableSize = sizeIn;
+			for(int i = 0; i < tableSize; i++)
+			{
+				bucket hold;
+				Table.push_back(hold);
+			}
 		}
 		void addBidder(string name, int id)
 		{
