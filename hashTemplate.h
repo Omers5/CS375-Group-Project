@@ -6,17 +6,21 @@ template <typename bucket>
 class HashTable
 {
 	public:
-		addBidder(string name, int id)
+		HashTable(int sizeIn)
+		{
+			tableSize = sizeIn;
+		}
+		void addBidder(string name, int id)
 		{
 			Table[id%tableSize].add(name, id);
 		}
 		//this should be also used for assassinateRandomBidder
 		//	id for this should be sent from id that was removed from heap
-		assassinateBidder(int id)
+		void assassinateBidder(int id)
 		{
 			Table[id%tableSize].remove(id);
 		}
-		getBidderName(int id)
+		void getBidderName(int id)
 		{
 			Table[id%tableSize].getName(id);
 		}
