@@ -72,14 +72,14 @@ class LinkedList
     string getName(int id)
     {
       Node* hold = head;
-      #Node* holdp = head;
+      //Node* holdp = head;
       while(hold != nullptr)
       {
         if(id == hold->id)
         {
           return hold->name;
         }
-        #holdp = hold;
+        //holdp = hold;
         hold = hold->next;
       }
       return "-1";
