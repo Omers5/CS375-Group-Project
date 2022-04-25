@@ -6,10 +6,10 @@ $(EXECUTABLE): $(EXECUTABLE).cpp
 	g++ $(FLAGS) $(EXECUTABLE).cpp -o $(EXECUTABLE)
   
 run: $(EXECUTABLE)
-  ./$(EXECUTABLE)
+	./$(EXECUTABLE)
   
 $(TEST): $(TEST).cpp
-  g++ $(FLAGS) $(TEST).cpp -o $(TEST)
+	g++ $(FLAGS) $(TEST).cpp -o $(TEST)
   
 runtest: $(TEST)
-  ./$(TEST)
+	./$(TEST)
