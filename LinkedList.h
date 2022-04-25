@@ -61,7 +61,7 @@ class LinkedList
         {
           holdp->next = hold->next;
           string nout = hold->name;
-          delete out;
+          delete hold;
           return nout;
         }
         holdp = hold;
