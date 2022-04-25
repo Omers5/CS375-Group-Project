@@ -11,7 +11,7 @@ struct Node
   int id;
   string name;
   Node *next;
-}
+};
 
 class LinkedList
 {
@@ -84,6 +84,6 @@ class LinkedList
       }
       return "-1";
     }
-}
+};
   
 #endif
