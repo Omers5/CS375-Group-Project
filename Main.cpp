@@ -18,9 +18,11 @@ int main (int argc, char *argv[]) {
     //linear
   } else if(argv[1] == "2") {
     //linked list
+    HashTable<LinkedList> hashLinked(TABLESIZE);
   } else if(argv[1] == "3"){
     //BST
   } else {
     cout << "argv[1] must be between 1-3, inclusive.\nReceived \"" << argv[1] << "\" as argv[1]\n\t(usage: 1 = linear, 2 = linked list, 3 = BST)" << endl;
+    return;
   }
 }
