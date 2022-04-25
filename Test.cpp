@@ -7,7 +7,8 @@
 #include "LinkedList.h"
 #include "hashTemplate.h"
 
+const int TABLESIZE = 10;
 
 int main (int argc, char *argv[]) {
-  HashTable<LinkedList> hashLinked;
+  HashTable<LinkedList> hashLinked(TABLESIZE);
 }
