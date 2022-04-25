@@ -11,5 +11,5 @@ run: $(EXECUTABLE)
 $(TEST): $(TEST).cpp
 	g++ $(FLAGS) $(TEST).cpp -o $(TEST)
   
-runtest: $(TEST)
+run$(TEST): $(TEST)
 	./$(TEST)
