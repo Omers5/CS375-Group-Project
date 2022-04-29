@@ -3,7 +3,7 @@ SRCPATH := src/
 CFLAGS := g++ -c -g -I $(HEADERPATH) -c $(SRCPATH)
 
 EXECUTABLES := btest \
-cp4
+runme
 
 OBJECTS := main.o \
 BinaryTree.o \
@@ -16,11 +16,11 @@ BinaryTreeNode.h \
 Maxheap.h \
 User.h
 
-all:	cp4
+all:	runme
 
 # Specify the object files that the target depends on
 # Also specify the object files needed to create the executable
-cp4:	$(OBJECTS)
+runme:	$(OBJECTS)
 	g++ -g $(OBJECTS) -o $@
 
 # Specify how the object files should be created from source files
@@ -41,15 +41,15 @@ Maxheap.o: $(SRCPATH)Maxheap.cpp $(HEADERPATH)Maxheap.h
 
 #Test main program
 
-r: cp4
-	./cp4
+r: runme
+	./runme
 
 #Test main program with test input
-ri: cp4 testInput.txt
-	./cp4 < testInput.txt
+ri: runme testInput.txt
+	./runme < testInput.txt
 
-rd: cp4
-	gdb ./cp4
+rd: runme
+	gdb ./runme
 #Tests for Binary Tree
 binaryTreeTest.o: $(SRCPATH)binaryTreeTest.cpp
 	$(CFLAGS)binaryTreeTest.cpp -o $@
