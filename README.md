@@ -17,8 +17,9 @@ BRANCH bst_heap
 
 Created a program which runs the whole auction using BST + Maxheap
 to run, 
+
 make all
-./runme <number>
+./runme 100
 
 TODO: 
 1. create a way to end the bid
