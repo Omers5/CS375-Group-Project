@@ -13,17 +13,17 @@ int Heaparr::insert(User da) {
     return size-1;
 }
 
-void Heaparr::heapSort( int heap_size,BinaryTree * bt) {
+void Heaparr::heapSort( int heap_size/*,BinaryTree * bt*/) {
     size = heap_size;
     int n = size;
     Build_Max_Heap(heap_size);
     for (int i = n - 1; i >= 1; i--) {
         string user1=maxHeap.at(0).name;
         string user2=maxHeap.at(i).name;
-        BinaryTreeNode* btnode1=bt->lookupNode(user1);
+        /*BinaryTreeNode* btnode1=bt->lookupNode(user1);
         BinaryTreeNode* btnode2=bt->lookupNode(user2);
         btnode1->setUserIndex(i);
-        btnode2->setUserIndex(0);
+        btnode2->setUserIndex(0);*/
             //  maxHeap.at(0).heapptr=&maxHeap.at(i);
             //  maxHeap.at(i).heapptr=&maxHeap.at(0);
 
