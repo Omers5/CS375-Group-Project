@@ -6,32 +6,37 @@
 
 // Binary Search Tree
 
+struct BTNode
+{
+    int id;
+    string name;
+    BTNode *right;
+    BTNode *left;
+}
+
 class BinaryTree
 {
 private:
-    int nElemenets;
-    BinaryTreeNode *headNode;
-    // Heaparr *heapPointer; //Points to the max heap
-
-    User *findMinUser(BinaryTreeNode *root);
+    BinaryTreeNode *head;
 
 public:
     BinaryTree();
     ~BinaryTree() { 
-        // cout<<"delete binary tree worked\n";
-        delete headNode;
-         };
-
+        delNodes(head);
+    }
+    void delNodes(BTNode* nin)
+    {
+        if(nin != nullptr)
+        {
+            delNodes(nin->left);
+            delNodes(nin->right);
+            delete nin;
+        }
+    }
     BinaryTreeNode *getHeadNode() { return headNode; }
-    int deleteBst();
-    void addNode(User const &userToAdd); // Add user to tree and then update heap
-    bool removeNode(string userName);    // remove that user from the tree
-    User *lookupUser(string userName);   // Lookup if user exists in the tree, if so return the User
-    BinaryTreeNode *lookupNode(string userName);   // Lookup if user exists in the tree, if so return the BTNode
-
-    void printInfo();
-
-    void inOrderPrint(BinaryTreeNode *root);
+    void add(int id, string name); // Add user to tree and then update heap
+    bool remove(int id);    // remove that user from the tree
+    string getName(int id);
 };
 
 #endif
