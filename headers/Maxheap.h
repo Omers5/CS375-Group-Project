@@ -19,7 +19,7 @@ public:
     void makeArray();
     void Build_Max_Heap( int heap_size);
     void Max_Heapify(int i, int heap_size);
-    void heapSort( int heap_size,BinaryTree *bt);
+    void heapSort( int heap_size/*,BinaryTree *bt*/);
     User pop();
     User popRandom();
 
