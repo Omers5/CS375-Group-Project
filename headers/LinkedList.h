@@ -6,17 +6,17 @@
 using namespace std;
 
 
-struct Node
+struct LLNode
 {
   int id;
   string name;
-  Node *next;
+  LLNode *next;
 };
 
 class LinkedList
 {
   private:
-    Node * head;
+    LLNode * head;
   public:
     LinkedList()
     {
@@ -26,15 +26,15 @@ class LinkedList
     {
       while(head != nullptr)
       {
-        Node * hold = head;
+        LLNode * hold = head;
         head = head->next;
         delete hold;
       }
     }
     void add(int id, string name)
     {
-      Node* hold = head;
-      Node* holdp = head;
+      LLNode* hold = head;
+      LLNode* holdp = head;
       while(hold != nullptr)
       {
         if(id == hold->id)
@@ -44,7 +44,7 @@ class LinkedList
         holdp = hold;
         hold = hold->next;
       }
-      Node* holdin = new Node();
+      LLNode* holdin = new LLNode();
       holdin->id = id;
       holdin->name = name;
       holdin->next = nullptr;
@@ -53,8 +53,8 @@ class LinkedList
     //return name
     string remove(int id)
     {
-      Node* hold = head;
-      Node* holdp = head;
+      LLNode* hold = head;
+      LLNode* holdp = head;
       while(hold != nullptr)
       {
         if(id == hold->id)
@@ -71,7 +71,7 @@ class LinkedList
     }
     string getName(int id)
     {
-      Node* hold = head;
+      LLNode* hold = head;
       //Node* holdp = head;
       while(hold != nullptr)
       {
