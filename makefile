@@ -9,7 +9,6 @@ test
 
 OBJECTS := main.o \
 BinaryTree.o \
-BinaryTreeNode.o \
 Maxheap.o \
 User.o \ 
 ProbeHash.o \
@@ -18,7 +17,6 @@ HashTemplate.o \
 
 OBJTEST := test.o \
 BinaryTree.o \
-BinaryTreeNode.o \
 Maxheap.o \
 User.o \ 
 ProbeHash.o \
@@ -26,7 +24,6 @@ LinkedList.o \
 HashTemplate.o \
 
 HEADERS := BinaryTree.h \
-BinaryTreeNode.h \
 Maxheap.h \
 User.h \
 LinkedList.h \
@@ -49,9 +46,6 @@ test: $(OBJTEST)
 # Specify how the object files should be created from source files
 main.o: $(SRCPATH)main.cpp 
 	$(CFLAGS)main.cpp -o $@
-
-BinaryTreeNode.o:	$(SRCPATH)BinaryTreeNode.cpp $(HEADERPATH)BinaryTreeNode.h
-	$(CFLAGS)BinaryTreeNode.cpp -o $@
 
 BinaryTree.o:	$(SRCPATH)BinaryTree.cpp $(HEADERPATH)BinaryTree.h
 	$(CFLAGS)BinaryTree.cpp -o $@
