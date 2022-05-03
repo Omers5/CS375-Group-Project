@@ -90,7 +90,7 @@ int main(int argc, char** argv)
     string temp;
     bool costValid = false;
     // cout << "Please enter flight cost:\n";
-    flightCost=stoi(argv[1]);
+    // flightCost=stoi(argv[1]);
     // cout<<"tester:"<<flightCost;
     // while (!costValid)
     // {
@@ -110,17 +110,6 @@ int main(int argc, char** argv)
     vector<string> tokens;
     while (true)
     {
-        // if (totalVotes >= flightCost && numberOfUsers>0)
-        // {
-        //     cout << "We have collected enough money, launching top user..." << endl;
-        //     User winner = scoreboard.pop();
-        //     numberOfUsers--;
-        //     scoreboard.heapSort(numberOfUsers, userTree);
-        //     userTree->removeNode(winner.getName());
-        //     winner.print();
-        //     cout << winner.getName() << " will be going to space!" << endl;
-        //     totalVotes -= flightCost;
-        // }
 
         cout << ENTER_COMMAND_MESSAGE << endl;
         getline(cin, command);
