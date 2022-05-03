@@ -21,6 +21,7 @@ enum InputCodes
     HELP = 5,
     PROFIT = 6, //added
     DELETE = 7,
+    DELETERANDOM = 8,
 };
 
 int determineCurrentCommand(string command)
@@ -54,6 +55,10 @@ int determineCurrentCommand(string command)
     {
         return DELETE;
     }
+    else if (command == "delete random")
+    {
+        return DELETERANDOM;
+    }
     //added
     else
         return -1;
@@ -63,14 +68,15 @@ int main(int argc, char** argv)
 {
     float bank=0; //added
     const string SCOREBOARD_ERROR_MESSAGE = "Invalid input. Correct syntax: 'scoreboard <Number of Bidders to Display>'";
-    const string VOTING_ERROR_MESSAGE = "Invalid Input. Correct syntax: 'vote <Number of Votes> <Candidate Name>'";
+    const string VOTING_ERROR_MESSAGE = "Invalid Input. Correct syntax: 'bid <Bid value> <Candidate Name>'";
     const string REGISTER_ERROR_MESSAGE = "Invalid Input. Correct syntax: 'register <Candidate Name>'";
     const string INPUT_ERROR_MESSAGE =
         "Invalid Command. Possible commands are:\n\
         register <Bidder Name>\n\
-        bid <Number of Votes> <Bidder Name>\n\
+        bid <Bid value> <Bidder Name>\n\
         scoreboard <Number of Bidders to Display>\n\
         delete \n\
+        delete random \n\
         exit\n";
     const string ENTER_COMMAND_MESSAGE = "Please enter command. Type 'help' for full list.";
 
@@ -80,7 +86,7 @@ int main(int argc, char** argv)
     BinaryTree *userTree = new BinaryTree;
     Heaparr scoreboard;
     int flightCost;
-    int totalVotes = 0;
+    // int totalVotes = 0;
     string temp;
     bool costValid = false;
     // cout << "Please enter flight cost:\n";
@@ -104,17 +110,17 @@ int main(int argc, char** argv)
     vector<string> tokens;
     while (true)
     {
-        if (totalVotes >= flightCost && numberOfUsers>0)
-        {
-            cout << "We have collected enough money, launching top user..." << endl;
-            User winner = scoreboard.pop();
-            numberOfUsers--;
-            scoreboard.heapSort(numberOfUsers, userTree);
-            userTree->removeNode(winner.getName());
-            winner.print();
-            cout << winner.getName() << " will be going to space!" << endl;
-            totalVotes -= flightCost;
-        }
+        // if (totalVotes >= flightCost && numberOfUsers>0)
+        // {
+        //     cout << "We have collected enough money, launching top user..." << endl;
+        //     User winner = scoreboard.pop();
+        //     numberOfUsers--;
+        //     scoreboard.heapSort(numberOfUsers, userTree);
+        //     userTree->removeNode(winner.getName());
+        //     winner.print();
+        //     cout << winner.getName() << " will be going to space!" << endl;
+        //     totalVotes -= flightCost;
+        // }
 
         cout << ENTER_COMMAND_MESSAGE << endl;
         getline(cin, command);
@@ -137,17 +143,7 @@ int main(int argc, char** argv)
         {
         
 
-        case DELETE:
-        {
-            User shot_dead = scoreboard.pop();
-            cout << "\n Looks like "<<shot_dead.getName()<<" is about to win the auction.\n.\n.\n.BANG!\n" << endl;
-            numberOfUsers--;
-            scoreboard.heapSort(numberOfUsers, userTree);
-            userTree->removeNode(shot_dead.getName());
-            shot_dead.print();
-            cout << shot_dead.getName() << " was SHOT DEAD!!" << endl;
-            totalVotes -= flightCost;
-        };
+        
         case REGISTER:
         {
             // Make sure he amount args is correct
@@ -188,10 +184,10 @@ int main(int argc, char** argv)
                 cout << VOTING_ERROR_MESSAGE << endl;
                 break;
             }
-            int votes = 0;
+            int bid_value = 0;
             try
             {
-                votes = stoi(tokens[1]);
+                bid_value = stoi(tokens[1]);
             }
             catch (exception e)
             {
@@ -215,13 +211,13 @@ int main(int argc, char** argv)
             // Make sure the candidate is in running
             if (localUser)
             {
-                totalVotes += votes / 2; //money for the vote
-                bank+=votes/2.0; //added
-                localUser->addVotes(votes);
+                // totalVotes += bid_value / 2; //money for the vote
+                // bank+=bid_value/2.0; //added
+                localUser->addBid(bid_value);
                 BinaryTreeNode *tmpnode = userTree->lookupNode(username);
                 int localUserIndex = tmpnode->getUserIndex();
                 // cout<<"\nlocal user index="<<localUserIndex;
-                scoreboard.maxHeap.at(localUserIndex).addVotes(votes);
+                scoreboard.maxHeap.at(localUserIndex).addBid(bid_value);
                 scoreboard.heapSort(numberOfUsers, userTree);
 
                 cout << "Total Bid amount by " << username << " = " << localUser->amount << endl;
@@ -264,6 +260,8 @@ int main(int argc, char** argv)
         case EXIT:
         {
             // Exits program
+            User won = scoreboard.pop();
+            cout << "\n"<<won.getName()<<" WON THE AUCTION!!!\n" << endl;
             cout << "Closing Program..." << endl;
             cout << "Goodbye." << endl;
             delete userTree;
@@ -272,12 +270,51 @@ int main(int argc, char** argv)
         case HELP:
             cout << "\nFull list of Commands:\n\
                 register<Candidate Name>\n\
-                bid <Number of Votes><Bidder Name>\n\
+                bid <Bid value><Bidder Name>\n\
                 scoreboard<Number of Bidder to Display>\n\
                 profit\n\
+                delete\n\
+                delete random\n\
                 exit\n"
                  << endl;
             break;
+        case DELETE:
+        {
+            if(numberOfUsers>0)
+            {
+            User shot_dead = scoreboard.pop();
+            cout << "\n Looks like "<<shot_dead.getName()<<" is about to win the auction.\n.\n.\n.BANG!\n" << endl;
+            numberOfUsers--;
+            scoreboard.heapSort(numberOfUsers, userTree);
+            userTree->removeNode(shot_dead.getName());
+            shot_dead.print();
+            cout << shot_dead.getName() << " was SHOT DEAD!!" << endl;
+            }
+            else{
+            cout << "\n Assasin: \" Umm.... who should I shoot at? chairs and tables??\""<< endl;
+
+            }
+            break;
+          
+        };
+        case DELETERANDOM:
+        {
+            if(numberOfUsers>0)
+            {
+            User shot_dead = scoreboard.popRandom();
+            numberOfUsers--;
+            scoreboard.heapSort(numberOfUsers, userTree);
+            userTree->removeNode(shot_dead.getName());
+            shot_dead.print();
+            cout << shot_dead.getName() << " was SHOT DEAD!!" << endl;
+            cout << "\n Looks like "<<shot_dead.getName()<<" is about to win the auction.\n.\n.\n.BANG!\n" << endl;
+          }
+            else{
+            cout << "\n Assasin: \" Umm.... who should I shoot at? chairs and tables??\""<< endl;
+
+            }
+            break;
+        };
         default:
 
             cout

@@ -102,3 +102,14 @@ User Heaparr::pop(){
     }
     return User();
 }
+
+User Heaparr::popRandom(){
+    if (maxHeap.size() > 0) {
+        std::cout <<maxHeap.at(0).name<<"\t"<<maxHeap.at(0).amount<< "\n ";
+        int randNum = rand()%(maxHeap.size() - 0 + 1) + 0;
+        User tmp = maxHeap.at(randNum);
+        maxHeap.erase(maxHeap.begin()+randNum);
+        return tmp;
+    }
+    return User();
+}

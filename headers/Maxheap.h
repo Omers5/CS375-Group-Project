@@ -21,6 +21,7 @@ public:
     void Max_Heapify(int i, int heap_size);
     void heapSort( int heap_size,BinaryTree *bt);
     User pop();
+    User popRandom();
 
     int size;
     vector<User> maxHeap;

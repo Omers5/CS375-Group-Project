@@ -14,7 +14,7 @@ User::User(string userName,User * ptr){
     this->name = userName;
     // this->heapptr = ptr;
 }
-void User::addVotes(int x)
+void User::addBid(int x)
 {
     this->amount = this->amount + x;
 }

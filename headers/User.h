@@ -19,7 +19,7 @@ class User{
         User(string userName);
         User(string userName,User * ptr);
 
-        void addVotes(int x);
+        void addBid(int x);
         bool operator<(const User& other);
 
         string getName() { return name; }
