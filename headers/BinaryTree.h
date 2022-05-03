@@ -35,7 +35,7 @@ public:
     }
     BinaryTreeNode *getHeadNode() { return headNode; }
     void add(int id, string name); // Add user to tree and then update heap
-    bool remove(int id);    // remove that user from the tree
+    string remove(int id);    // remove that user from the tree
     string getName(int id);
 };
 
