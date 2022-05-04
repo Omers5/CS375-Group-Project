@@ -22,6 +22,7 @@
 using namespace std;
 
 const int TABLESIZE = 10;
+const bool BOOLPRINTCMDS = true;
 
 int main (int argc, char *argv[]) {
   if(argc != 2)
@@ -72,7 +73,8 @@ int main (int argc, char *argv[]) {
       numberOfUsers++;
       maxHeap.heapSort(numberOfUsers);
       //output id
-      cout << "User " << namein << " with bid " << bidin << " created with id " << idin << endl;
+	    if(BOOLPRINTCMDS)
+      	cout << "User " << namein << " with bid " << bidin << " created with id " << idin << endl;
 
     } else if(cmdin == "assassinate"){
       //cout << "Input \"random\" or int id: ";
@@ -87,7 +89,8 @@ int main (int argc, char *argv[]) {
         userOut =  maxHeap.popid(stoi(cmdin));
       }
       string nout = to_string(hashT.assassinateBidder(stoi(userOut.name)));
-      cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
+      if(BOOLPRINTCMDS)
+      	cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
       //sort
       numberOfUsers--;
       maxHeap.heapSort(numberOfUsers);
@@ -100,9 +103,11 @@ int main (int argc, char *argv[]) {
       int newBid = maxHeap.updateBid(stoi(idin), stoi(bidin));
       if(newBid == -1)
       {
-        cout << "id " << idin << " not found" << endl;
+        if(BOOLPRINTCMDS)
+      		cout << "id " << idin << " not found" << endl;
       } else {
-        cout << "id " << idin << " new bid is " << newBid << endl;
+        if(BOOLPRINTCMDS)
+      		cout << "id " << idin << " new bid is " << newBid << endl;
       }
       //sort
       maxHeap.heapSort(numberOfUsers);
@@ -112,9 +117,11 @@ int main (int argc, char *argv[]) {
       string nameout = hashT.getBidderName(stoi(idin));
       if(nameout == "-1")
       {
-        cout << "id " << idin << " not found" << endl;
+        if(BOOLPRINTCMDS)
+      		cout << "id " << idin << " not found" << endl;
       } else {
-        cout << "id " << idin << " name is " << nameout << endl;
+        if(BOOLPRINTCMDS)
+      		cout << "id " << idin << " name is " << nameout << endl;
       }
     } else if(cmdin == "getbid"){
       string idin;
@@ -122,26 +129,33 @@ int main (int argc, char *argv[]) {
       int bidout = maxHeap.getBid(stoi(idin));
       if(bidout == -1)
       {
-        cout << "id " << idin << " not found" << endl;
+        if(BOOLPRINTCMDS)
+      		cout << "id " << idin << " not found" << endl;
       } else {
-        cout << "id " << idin << " bid is " << bidout << endl;
+        if(BOOLPRINTCMDS)
+      		cout << "id " << idin << " bid is " << bidout << endl;
       }
     } else if(cmdin == "winner"){
       User won = maxHeap.pop();
       string name = hashT.getBidderName(stoi(won.getName()));
-      cout << "Winner of auction is " << name << " with id " << won.getName();
+      if(BOOLPRINTCMDS)
+      	cout << "Winner of auction is " << name << " with id " << won.getName();
       i = commandsin.size();
     } else if(cmdin == "exit"){
-      cout << "Exiting..." << endl;
+      if(BOOLPRINTCMDS)
+      	cout << "Exiting..." << endl;
       i = commandsin.size();
     } else if(cmdin == "scoreboard"){
       string k;
       getline(iss, k, ' ');
-      cout << "\nSCOREBOARD";
+      if(BOOLPRINTCMDS)
+			{
+      	cout << "\nSCOREBOARD";
       cout << "\n-----------------\n";
       maxHeap.print(stoi(k));
       maxHeap.heapSort(numberOfUsers);
       cout << "\n-----------------\n";
+			}
     }
   }
   end = chrono::system_clock::now();
@@ -176,7 +190,8 @@ int main (int argc, char *argv[]) {
       numberOfUsers++;
       maxHeap2.heapSort(numberOfUsers);
       //output id
-      cout << "User " << namein << " with bid " << bidin << " created with id " << idin << endl;
+      if(BOOLPRINTCMDS)
+      	cout << "User " << namein << " with bid " << bidin << " created with id " << idin << endl;
 
     } else if(cmdin == "assassinate"){
       //cout << "Input \"random\" or int id: ";
@@ -191,7 +206,8 @@ int main (int argc, char *argv[]) {
         userOut =  maxHeap2.popid(stoi(cmdin));
       }
       string nout = hashLinked->assassinateBidder(stoi(userOut.name));
-      cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
+      if(BOOLPRINTCMDS)
+      	cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
       //sort
       numberOfUsers--;
       maxHeap2.heapSort(numberOfUsers);
@@ -204,9 +220,11 @@ int main (int argc, char *argv[]) {
       int newBid = maxHeap2.updateBid(stoi(idin), stoi(bidin));
       if(newBid == -1)
       {
-        cout << "id " << idin << " not found" << endl;
+        if(BOOLPRINTCMDS)
+      		cout << "id " << idin << " not found" << endl;
       } else {
-        cout << "id " << idin << " new bid is " << newBid << endl;
+        if(BOOLPRINTCMDS)
+      		cout << "id " << idin << " new bid is " << newBid << endl;
       }
       //sort
       maxHeap2.heapSort(numberOfUsers);
@@ -216,9 +234,11 @@ int main (int argc, char *argv[]) {
       string nameout = hashLinked->getBidderName(stoi(idin));
       if(nameout == "-1")
       {
-        cout << "id " << idin << " not found" << endl;
+        if(BOOLPRINTCMDS)
+      		cout << "id " << idin << " not found" << endl;
       } else {
-        cout << "id " << idin << " name is " << nameout << endl;
+        if(BOOLPRINTCMDS)
+      		cout << "id " << idin << " name is " << nameout << endl;
       }
     } else if(cmdin == "getbid"){
       string idin;
@@ -226,28 +246,35 @@ int main (int argc, char *argv[]) {
       int bidout = maxHeap2.getBid(stoi(idin));
       if(bidout == -1)
       {
-        cout << "id " << idin << " not found" << endl;
+        if(BOOLPRINTCMDS)
+      		cout << "id " << idin << " not found" << endl;
       } else {
-        cout << "id " << idin << " bid is " << bidout << endl;
+        if(BOOLPRINTCMDS)
+      		cout << "id " << idin << " bid is " << bidout << endl;
       }
     } else if(cmdin == "winner"){
       User won = maxHeap2.pop();
       string name = hashLinked->getBidderName(stoi(won.getName()));
-      cout << "Winner of auction is " << name << " with id " << won.getName();
+      if(BOOLPRINTCMDS)
+      	cout << "Winner of auction is " << name << " with id " << won.getName();
       //delete hashLinked;
       i = commandsin.size();
     } else if(cmdin == "exit"){
-      cout << "Exiting..." << endl;
+      if(BOOLPRINTCMDS)
+      	cout << "Exiting..." << endl;
       //delete hashLinked;
       i = commandsin.size();
     } else if(cmdin == "scoreboard"){
       string k;
       getline(iss, k, ' ');
-      cout << "\nSCOREBOARD";
-      cout << "\n-----------------\n";
-      maxHeap2.print(stoi(k));
-      maxHeap2.heapSort(numberOfUsers);
-      cout << "\n-----------------\n";
+			if(BOOLPRINTCMDS)
+			{
+				cout << "\nSCOREBOARD";
+				cout << "\n-----------------\n";
+				maxHeap2.print(stoi(k));
+				maxHeap2.heapSort(numberOfUsers);
+				cout << "\n-----------------\n";
+			}
     }
   }
   end = chrono::system_clock::now();
@@ -281,7 +308,8 @@ int main (int argc, char *argv[]) {
       numberOfUsers++;
       maxHeap3.heapSort(numberOfUsers);
       //output id
-      cout << "User " << namein << " with bid " << bidin << " created with id " << idin << endl;
+      if(BOOLPRINTCMDS)
+      	cout << "User " << namein << " with bid " << bidin << " created with id " << idin << endl;
 
     } else if(cmdin == "assassinate"){
       //cout << "Input \"random\" or int id: ";
@@ -296,7 +324,8 @@ int main (int argc, char *argv[]) {
         userOut =  maxHeap3.popid(stoi(cmdin));
       }
       string nout = hashTree->assassinateBidder(stoi(userOut.name));
-      cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
+      if(BOOLPRINTCMDS)
+      	cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
       //sort
       numberOfUsers--;
       maxHeap3.heapSort(numberOfUsers);
@@ -309,9 +338,11 @@ int main (int argc, char *argv[]) {
       int newBid = maxHeap3.updateBid(stoi(idin), stoi(bidin));
       if(newBid == -1)
       {
-        cout << "id " << idin << " not found" << endl;
+        if(BOOLPRINTCMDS)
+      		cout << "id " << idin << " not found" << endl;
       } else {
-        cout << "id " << idin << " new bid is " << newBid << endl;
+        if(BOOLPRINTCMDS)
+      		cout << "id " << idin << " new bid is " << newBid << endl;
       }
       //sort
       maxHeap3.heapSort(numberOfUsers);
@@ -321,9 +352,11 @@ int main (int argc, char *argv[]) {
       string nameout = hashTree->getBidderName(stoi(idin));
       if(nameout == "-1")
       {
-        cout << "id " << idin << " not found" << endl;
+        if(BOOLPRINTCMDS)
+      		cout << "id " << idin << " not found" << endl;
       } else {
-        cout << "id " << idin << " name is " << nameout << endl;
+        if(BOOLPRINTCMDS)
+      		cout << "id " << idin << " name is " << nameout << endl;
       }
     } else if(cmdin == "getbid"){
       string idin;
@@ -331,28 +364,35 @@ int main (int argc, char *argv[]) {
       int bidout = maxHeap3.getBid(stoi(idin));
       if(bidout == -1)
       {
-        cout << "id " << idin << " not found" << endl;
+        if(BOOLPRINTCMDS)
+      		cout << "id " << idin << " not found" << endl;
       } else {
-        cout << "id " << idin << " bid is " << bidout << endl;
+        if(BOOLPRINTCMDS)
+      		cout << "id " << idin << " bid is " << bidout << endl;
       }
     } else if(cmdin == "winner"){
       User won = maxHeap3.pop();
       string name = hashTree->getBidderName(stoi(won.getName()));
-      cout << "Winner of auction is " << name << " with id " << won.getName();
+      if(BOOLPRINTCMDS)
+      	cout << "Winner of auction is " << name << " with id " << won.getName();
       //delete hashTree;
       i = commandsin.size();
     } else if(cmdin == "exit"){
-      cout << "Exiting..." << endl;
+      if(BOOLPRINTCMDS)
+      	cout << "Exiting..." << endl;
       //delete hashTree;
       i = commandsin.size();
     } else if(cmdin == "scoreboard"){
       string k;
       getline(iss, k, ' ');
-      cout << "\nSCOREBOARD";
-      cout << "\n-----------------\n";
-      maxHeap3.print(stoi(k));
-      maxHeap3.heapSort(numberOfUsers);
-      cout << "\n-----------------\n";
+      if(BOOLPRINTCMDS)
+			{
+      	cout << "\nSCOREBOARD";
+				cout << "\n-----------------\n";
+				maxHeap3.print(stoi(k));
+				maxHeap3.heapSort(numberOfUsers);
+				cout << "\n-----------------\n";
+			}
     }
   }
   end = chrono::system_clock::now();
