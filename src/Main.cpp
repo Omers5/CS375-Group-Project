@@ -22,6 +22,7 @@ const int TABLESIZE = 10;
 const string COUTCMDS = "Please input a command from the following list:\n\t\"add\" - adds new bidder\n\t\"assassinate\" - assassinates bidder by id or randomly\n\t\"bid\" - increase existing bidder bid\n\t\"getname\" - gets name of bidder\n\t\"getbid\" - gets existing bidders bid\n\t\"winner\" - crowns a winner and exits\n\t\"exit\" - exits without crowning winner";
 int main (int argc, char *argv[]) {
   int idhold = 1;
+  int numberOfUsers = 0;
   if(argc != 2)
   {
     cout << "Requires only 1 argument after executable name.\nReceived " << to_string(argc-1) << " arguments after executable." << endl;
@@ -55,6 +56,8 @@ int main (int argc, char *argv[]) {
         User userin(to_string(idin));
         userin.amount = bidin;
         int iout = maxHeap.insert(userin);
+        numberOfUsers++;
+        maxHeap.heapSort(numberOfUsers);
         //output id
         cout << "User " << namein << " with bid " << bidin << " created with id " << idin << endl;
         
@@ -62,6 +65,9 @@ int main (int argc, char *argv[]) {
         cout << "Input \"random\" or int id: ";
         cin >> cmdin;
         //assassinate here
+        //sort
+        numberOfUsers--;
+        maxHeap.heapSort(numberOfUsers);
       } else if(cmdin == "bid"){
         int idin;
         int bidin;
@@ -70,6 +76,8 @@ int main (int argc, char *argv[]) {
         cout << "Input int bid to increase original bid by: ";
         cin >> bidin;
         //update bid here
+        //sort
+        maxHeap.heapSort(numberOfUsers);
       } else if(cmdin == "getname"){
         int idin;
         cout << "Input int id: ";
@@ -84,12 +92,21 @@ int main (int argc, char *argv[]) {
       } else if(cmdin == "getbid"){
         
       } else if(cmdin == "winner"){
-        string winout = "";
-        cout << "Winner of auction is: " << winout;
+        User won = scoreboard.pop();
+        cout << "Winner of auction is: " << won.getName();
         lhold = false;
       } else if(cmdin == "exit"){
         cout << "Exiting..." << endl;
         lhold = false;
+      } else if(cmdin == "scoreboard") {
+        int k;
+        cout << "Input k to print: ";
+        cin >> k;
+        cout << "\nSCOREBOARD";
+        cout << "\n-----------------\n";
+        maxHeap.print(k);
+        maxHeap.heapSort(numberOfUsers);
+        cout << "\n-----------------\n";
       } else {
         cout << "Unknown command. Command received: \"" << cmdin << "\".\n" << COUTCMDS << endl;
       }
@@ -106,7 +123,7 @@ int main (int argc, char *argv[]) {
       string cmdin;
       cout << "cmd: ";
       cin >> cmdin;
-      if(cmdin == "add bidder"){
+      if(cmdin == "add"){
         //get bidder name and value
         string namein;
         int bidin;
@@ -122,6 +139,8 @@ int main (int argc, char *argv[]) {
         User userin(to_string(idin));
         userin.amount = bidin;
         int iout = maxHeap.insert(userin);
+        numberOfUsers++;
+        maxHeap.heapSort(numberOfUsers);
         //output id
         cout << "User " << namein << " with bid " << bidin << " created with id " << idin << endl;
         
@@ -129,6 +148,9 @@ int main (int argc, char *argv[]) {
         cout << "Input \"random\" or int id: ";
         cin >> cmdin;
         //assassinate here
+        //sort
+        numberOfUsers--;
+        maxHeap.heapSort(numberOfUsers);
       } else if(cmdin == "bid"){
         int idin;
         int bidin;
@@ -137,7 +159,9 @@ int main (int argc, char *argv[]) {
         cout << "Input int bid to increase original bid by: ";
         cin >> bidin;
         //update bid here
-      } else if(cmdin == "get name"){
+        //sort
+        maxHeap.heapSort(numberOfUsers);
+      } else if(cmdin == "getname"){
         int idin;
         cout << "Input int id: ";
         cin >> idin;
@@ -148,16 +172,26 @@ int main (int argc, char *argv[]) {
         } else {
           cout << "id " << idin << " name is " << nameout << endl;
         }
-      } else if(cmdin == "get bid"){
+      } else if(cmdin == "getbid"){
         
       } else if(cmdin == "winner"){
-        string winout = "";
-        cout << "Winner of auction is: " << winout;
+        User won = scoreboard.pop();
+        cout << "Winner of auction is: " << won.getName();
+        delete hashLinked;
         lhold = false;
       } else if(cmdin == "exit"){
         cout << "Exiting..." << endl;
         delete hashLinked;
         lhold = false;
+      } else if(cmdin == "scoreboard") {
+        int k;
+        cout << "Input k to print: ";
+        cin >> k;
+        cout << "\nSCOREBOARD";
+        cout << "\n-----------------\n";
+        maxHeap.print(k);
+        maxHeap.heapSort(numberOfUsers);
+        cout << "\n-----------------\n";
       } else {
         cout << "Unknown command. Command received: \"" << cmdin << "\".\n" << COUTCMDS << endl;
       }
@@ -174,7 +208,7 @@ int main (int argc, char *argv[]) {
       string cmdin;
       cout << "cmd: ";
       cin >> cmdin;
-      if(cmdin == "add bidder"){
+      if(cmdin == "add"){
         //get bidder name and value
         string namein;
         int bidin;
@@ -190,6 +224,8 @@ int main (int argc, char *argv[]) {
         User userin(to_string(idin));
         userin.amount = bidin;
         int iout = maxHeap.insert(userin);
+        numberOfUsers++;
+        maxHeap.heapSort(numberOfUsers);
         //output id
         cout << "User " << namein << " with bid " << bidin << " created with id " << idin << endl;
         
@@ -197,6 +233,9 @@ int main (int argc, char *argv[]) {
         cout << "Input \"random\" or int id: ";
         cin >> cmdin;
         //assassinate here
+        //sort
+        numberOfUsers--;
+        maxHeap.heapSort(numberOfUsers);
       } else if(cmdin == "bid"){
         int idin;
         int bidin;
@@ -205,7 +244,9 @@ int main (int argc, char *argv[]) {
         cout << "Input int bid to increase original bid by: ";
         cin >> bidin;
         //update bid here
-      } else if(cmdin == "get name"){
+        //sort
+        maxHeap.heapSort(numberOfUsers);
+      } else if(cmdin == "getname"){
         int idin;
         cout << "Input int id: ";
         cin >> idin;
@@ -216,16 +257,26 @@ int main (int argc, char *argv[]) {
         } else {
           cout << "id " << idin << " name is " << nameout << endl;
         }
-      } else if(cmdin == "get bid"){
+      } else if(cmdin == "getbid"){
         
       } else if(cmdin == "winner"){
-        string winout = "";
-        cout << "Winner of auction is: " << winout;
+        User won = scoreboard.pop();
+        cout << "Winner of auction is: " << won.getName();
+        delete hashTree;
         lhold = false;
       } else if(cmdin == "exit"){
         cout << "Exiting..." << endl;
         delete hashTree;
         lhold = false;
+      } else if(cmdin == "scoreboard") {
+        int k;
+        cout << "Input k to print: ";
+        cin >> k;
+        cout << "\nSCOREBOARD";
+        cout << "\n-----------------\n";
+        maxHeap.print(k);
+        maxHeap.heapSort(numberOfUsers);
+        cout << "\n-----------------\n";
       } else {
         cout << "Unknown command. Command received: \"" << cmdin << "\".\n" << COUTCMDS << endl;
       }
@@ -235,5 +286,6 @@ int main (int argc, char *argv[]) {
     cout << "argv[1] must be between 1-3, inclusive.\nReceived \"" << argv[1] << "\" as argv[1]\n\t(usage: 1 = linear, 2 = linked list, 3 = BST)" << endl;
     return -1;
   }
+  cout << "Exited program." << endl;
   return 0;
 }
