@@ -190,7 +190,7 @@ int main (int argc, char *argv[]) {
       } else {
         userOut =  maxHeap2.popid(stoi(cmdin));
       }
-      string nout = to_string(hashLinked->assassinateBidder(userOut.name));
+      string nout = hashLinked->assassinateBidder(stoi(userOut.name));
       cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
       //sort
       numberOfUsers--;
@@ -201,7 +201,7 @@ int main (int argc, char *argv[]) {
       getline(iss, idin, ' ');
       getline(iss, bidin, ' ');
       //update bid here
-      int newBid = maxHeap2.updateBid(stoi(idin), bidin);
+      int newBid = maxHeap2.updateBid(stoi(idin), stoi(bidin));
       if(newBid == -1)
       {
         cout << "id " << idin << " not found" << endl;
@@ -245,7 +245,7 @@ int main (int argc, char *argv[]) {
       getline(iss, k, ' ');
       cout << "\nSCOREBOARD";
       cout << "\n-----------------\n";
-      maxHeap2.print(k);
+      maxHeap2.print(stoi(k));
       maxHeap2.heapSort(numberOfUsers);
       cout << "\n-----------------\n";
     }
@@ -306,7 +306,7 @@ int main (int argc, char *argv[]) {
       getline(iss, idin, ' ');
       getline(iss, bidin, ' ');
       //update bid here
-      int newBid = maxHeap3.updateBid(stoi(idin), bidin);
+      int newBid = maxHeap3.updateBid(stoi(idin), stoi(bidin));
       if(newBid == -1)
       {
         cout << "id " << idin << " not found" << endl;
@@ -350,7 +350,7 @@ int main (int argc, char *argv[]) {
       getline(iss, k, ' ');
       cout << "\nSCOREBOARD";
       cout << "\n-----------------\n";
-      maxHeap3.print(k);
+      maxHeap3.print(stoi(k));
       maxHeap3.heapSort(numberOfUsers);
       cout << "\n-----------------\n";
     }
