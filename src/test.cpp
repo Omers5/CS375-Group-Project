@@ -9,8 +9,13 @@
 #include "User.h"
 #include "BinaryTree.h"
 #include "Maxheap.h"
+#include "LinkedList.h"
+#include "HashTemplate.h"
+#include "ProbeHash.h"
 
 using namespace std;
+
+const int TABLESIZE = 10;
 
 enum InputCodes
 {
@@ -84,6 +89,9 @@ int main(int argc, char** argv)
 
     int numberOfUsers = 0;
     BinaryTree *userTree = new BinaryTree;
+    HashTable<LinkedList> *hashLinked = new HashTable<LinkedList>(TABLESIZE);
+    HashTable<BinaryTree> *hashTree = new HashTable<BinaryTree>(TABLESIZE);
+    PHashTable hashT(TABLESIZE);
     Heaparr scoreboard;
     int flightCost;
     // int totalVotes = 0;
