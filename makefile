@@ -42,7 +42,7 @@ test: $(OBJTEST)
 inputGenerator: inputGenerator.o
 	g++ -g inputGenerator.o -o $@
 	
-inputGenerator.o: $(SRCPATH)$@.cpp
+inputGenerator.o: $(SRCPATH)inputGenerator.cpp
 	$(CFLAGS)inputGenerator.cpp -o $@
 
 # Specify how the object files should be created from source files
