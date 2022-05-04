@@ -97,7 +97,7 @@ void Heaparr::print(int k){
 User Heaparr::popid(int id){
     for(int i = 0; i < maxHeap.size(); i++)
     {
-        if(maxHeap.at(i).id == id)
+        if(stoi(maxHeap.at(i).name) == id)
         {
             //std::cout <<maxHeap.at(i).name<<"\t"<<maxHeap.at(i).amount<< "\n ";
             User tmp = maxHeap.at(i);
@@ -128,7 +128,7 @@ User Heaparr::popRandom(){
     return User();
 }
 
-int getBid(int id)
+int Heaparr::getBid(int id)
 {
     for(int i = 0; i < maxHeap.size(); i++)
     {
@@ -141,7 +141,7 @@ int getBid(int id)
     return -1;
 }
 
-int updateBid(int id, int valuein)
+int Heaparr::updateBid(int id, int valuein)
 {
     for(int i = 0; i < maxHeap.size(); i++)
     {
