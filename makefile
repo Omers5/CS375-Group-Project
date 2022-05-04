@@ -10,7 +10,7 @@ test
 OBJECTS := Main.o \
 BinaryTree.o \
 Maxheap.o \
-User.o \ 
+User.o \
 ProbeHash.o \
 LinkedList.o \
 HashTemplate.o
@@ -18,7 +18,7 @@ HashTemplate.o
 OBJTEST := test.o \
 BinaryTree.o \
 Maxheap.o \
-User.o \ 
+User.o \
 ProbeHash.o \
 LinkedList.o \
 HashTemplate.o
