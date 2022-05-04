@@ -12,16 +12,12 @@ BinaryTree.o \
 Maxheap.o \
 User.o \
 ProbeHash.o \
-LinkedList.o \
-HashTemplate.o
 
 OBJTEST := test.o \
 BinaryTree.o \
 Maxheap.o \
 User.o \
 ProbeHash.o \
-LinkedList.o \
-HashTemplate.o
 
 HEADERS := BinaryTree.h \
 Maxheap.h \
@@ -55,12 +51,6 @@ User.o: $(SRCPATH)User.cpp $(HEADERPATH)User.h
 
 ProbeHash.o:	$(SRCPATH)ProbeHash.cpp $(HEADERPATH)ProbeHash.h
 	$(CFLAGS)ProbeHash.cpp -o $@
-	
-HashTemplate.o: $(HEADERPATH)HashTemplate.h
-	$(CFLAGSH)HashTemplate.h -o $@
-	
-LinkedList.o: $(HEADERPATH)LinkedList.h
-	$(CFLAGSH)LinkedList.h -o $@
 
 Maxheap.o: $(SRCPATH)Maxheap.cpp $(HEADERPATH)Maxheap.h
 	$(CFLAGS)Maxheap.cpp -o $@
