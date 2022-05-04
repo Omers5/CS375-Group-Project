@@ -15,7 +15,7 @@ struct Node
 		name = "NULL";
 		STATE = "NULL";
 	}
-	Node(string n, int i, double v)
+	Node(string n, int i)
 	{
 		id = i;
 		name = n;
@@ -30,7 +30,7 @@ class HashTable{
 	public:
 		HashTable(int size);
 		int hashFunct(int id);
-		int addBidder(string name, int id, double value);
+		int addBidder(string name, int id);
 		int findBidder(int id);
 		int assassinateBidder(int id);
 		string getBidderName(int id);
