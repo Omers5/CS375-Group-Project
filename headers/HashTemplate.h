@@ -15,6 +15,14 @@ class HashTable
 				Table.push_back(hold);
 			}
 		}
+	
+		~HashTable()
+		{
+			for(int i = 0; i < tableSize; i++)
+			{
+				delete Table.pop_back();
+			}
+		}
 		void addBidder(string name, int id)
 		{
 			Table[id%tableSize].add(name, id);
@@ -29,6 +37,7 @@ class HashTable
 		{
 			return Table[id%tableSize].getName(id);
 		}
+	
 			
 		
 	private:
