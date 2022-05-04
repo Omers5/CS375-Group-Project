@@ -11,3 +11,7 @@ main file takes 1 argument (in range of 1-3, inclusive), and creates a hash tabl
 test files takes 1 argument (input file name), creates 1 heap and 1 of each hash table (meaning 3 hash tables), runs the same tests from input file on each hash table, and outputs the time taken by each test on each hash table.
 "make test" to make the test file
 "./test <input_file_name>" to run test file
+
+
+
+To change the number of buckets in either program, must go into either Main.cpp or test.cpp and change const int TABLESIZE
