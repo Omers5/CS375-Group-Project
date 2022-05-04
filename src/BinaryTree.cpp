@@ -2,11 +2,11 @@
 
 BinaryTree::BinaryTree()
 {
-    this->headNode = nullptr;
+    this->head = nullptr;
 }
 
 // Add node to the binary search tree
-void BinaryTree::add(int id, string name)
+void BinaryTree::add(string name, int id)
 {
     BTNode *newNode = new BTNode();
     newNode->name = name;
@@ -45,7 +45,7 @@ void BinaryTree::add(int id, string name)
 }
 
 // remove a node from a tree and return name, returns -1 if user is not present or tree is empty
-bool BinaryTree::remove(int id)
+string BinaryTree::remove(int id)
 {
     BTNode *currNode = this->head;
     BTNode *prevNode = this->head;
