@@ -24,7 +24,7 @@ public:
     User popRandom();
     
     int getBid(int id);
-    int updateBid(int id);
+    int updateBid(int, int);
     User popid(int id);
 
     int size;
