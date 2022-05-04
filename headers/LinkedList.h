@@ -6,17 +6,17 @@
 using namespace std;
 
 
-struct Node
+struct LLNode
 {
   int id;
   string name;
-  Node *next;
+  LLNode *next;
 };
 
 class LinkedList
 {
   private:
-    Node * head;
+    LLNode * head;
   public:
     LinkedList()
     {
@@ -26,40 +26,54 @@ class LinkedList
     {
       while(head != nullptr)
       {
-        Node * hold = head;
+        LLNode * hold = head;
         head = head->next;
         delete hold;
       }
     }
-    void add(int id, string name)
+    void add(string name, int id)
     {
-      Node* hold = head;
-      Node* holdp = head;
-      while(hold != nullptr)
+      if(head != nullptr)
       {
-        if(id == hold->id)
+        LLNode* hold = head;
+        LLNode* holdp = head;
+        while(hold != nullptr)
         {
-          //?? what to do about this?
+          if(id == hold->id)
+          {
+            //?? what to do about this?
+          }
+          holdp = hold;
+          hold = hold->next;
         }
-        holdp = hold;
-        hold = hold->next;
+        LLNode* holdin = new LLNode();
+        holdin->id = id;
+        holdin->name = name;
+        holdin->next = nullptr;
+        holdp->next = holdin;
+      } else {
+        LLNode* holdin = new LLNode();
+        holdin->id = id;
+        holdin->name = name;
+        holdin->next = nullptr;
+        head = holdin;
       }
-      Node* holdin = new Node();
-      holdin->id = id;
-      holdin->name = name;
-      holdin->next = nullptr;
-      holdp->next = holdin;
     }
     //return name
     string remove(int id)
     {
-      Node* hold = head;
-      Node* holdp = head;
+      LLNode* hold = head;
+      LLNode* holdp = head;
       while(hold != nullptr)
       {
         if(id == hold->id)
         {
-          holdp->next = hold->next;
+          if(hold == head)
+          {
+            head = head->next;
+          } else {
+            holdp->next = hold->next;
+          }
           string nout = hold->name;
           delete hold;
           return nout;
@@ -71,7 +85,7 @@ class LinkedList
     }
     string getName(int id)
     {
-      Node* hold = head;
+      LLNode* hold = head;
       //Node* holdp = head;
       while(hold != nullptr)
       {

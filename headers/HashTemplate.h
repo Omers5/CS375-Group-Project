@@ -1,4 +1,5 @@
 #include <vector>
+#include <string>
 
 using namespace std;
 //to be used with either linked list or BST as bucket
@@ -15,20 +16,30 @@ class HashTable
 				Table.push_back(hold);
 			}
 		}
+	
+		~HashTable()
+		{
+			for(int i = 0; i < tableSize; i++)
+			{
+				//pop_back() also deletes
+				Table.pop_back();
+			}
+		}
 		void addBidder(string name, int id)
 		{
 			Table[id%tableSize].add(name, id);
 		}
 		//this should be also used for assassinateRandomBidder
 		//	id for this should be sent from id that was removed from heap
-		void assassinateBidder(int id)
+		string assassinateBidder(int id)
 		{
-			Table[id%tableSize].remove(id);
+			return Table[id%tableSize].remove(id);
 		}
-		void getBidderName(int id)
+		string getBidderName(int id)
 		{
-			Table[id%tableSize].getName(id);
+			return Table[id%tableSize].getName(id);
 		}
+	
 			
 		
 	private:
