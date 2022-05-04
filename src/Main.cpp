@@ -24,14 +24,14 @@ int main (int argc, char *argv[]) {
   if(argc != 2)
   {
     cout << "Requires only 1 argument after executable name.\nReceived " << to_string(argc-1) << " arguments after executable." << endl;
-    return;
+    return -1;
   }
   if(argv[1] == "1")
   {
     //linear
     cout << "Hash table with linked list buckets selected (using " << TABLESIZE << " buckets, changeable in main.cpp)" << endl;
     PHashTable hashT(TABLESIZE);
-    Heaparr maxHeap();
+    Heaparr maxHeap;
     bool lhold = true;
     cout << "Please input a command from the following list:\n\tadd bidder\n\tassassinate\n\tbid\n\tget name\n\tget bid\n\twinner\n\texit" << endl;
     while (lhold) {
@@ -50,7 +50,7 @@ int main (int argc, char *argv[]) {
         int idin = idhold;
         idhold++;
         //input data into maxheap and hashtable
-        hashT->addBidder(namein, idin);
+        hashT.addBidder(namein, idin);
         User userin(to_string(idin));
         userin.amount = bidin;
         int iout = maxHeap.insert(User);
@@ -96,7 +96,7 @@ int main (int argc, char *argv[]) {
     //linked list
     cout << "Hash table with linked list buckets selected (using " << TABLESIZE << " buckets, changeable in main.cpp)" << endl;
     HashTable<LinkedList> *hashLinked = new HashTable<LinkedList>(TABLESIZE);
-    Heaparr maxHeap();
+    Heaparr maxHeap;
     bool lhold = true;
     cout << "Please input a command from the following list:\n\tadd bidder\n\tassassinate\n\tbid\n\tget name\n\tget bid\n\twinner\n\texit" << endl;
     while (lhold) {
@@ -162,7 +162,7 @@ int main (int argc, char *argv[]) {
     //BST
     cout << "Hash table with linked list buckets selected (using " << TABLESIZE << " buckets, changeable in main.cpp)" << endl;
     HashTable<BinaryTree> *hashTree = new HashTable<BinaryTree>(TABLESIZE);
-    Heaparr maxHeap();
+    Heaparr maxHeap;
     bool lhold = true;
     cout << "Please input a command from the following list:\n\tadd bidder\n\tassassinate\n\tbid\n\tget name\n\tget bid\n\twinner\n\texit" << endl;
     while (lhold) {
