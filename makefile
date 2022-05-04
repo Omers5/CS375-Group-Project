@@ -40,8 +40,11 @@ test: $(OBJTEST)
 	g++ -g $(OBJTEST) -o $@
 
 # Specify how the object files should be created from source files
-Main.o: $(SRCPATH)Main.cpp 
+Main.o: $(SRCPATH)Main.cpp $(HEADERPATH)HashTemplate.h $(HEADERPATH)LinkedList.h
 	$(CFLAGS)Main.cpp -o $@
+	
+test.o: $(SRCPATH)test.cpp $(HEADERPATH)HashTemplate.h $(HEADERPATH)LinkedList.h
+	$(CFLAGS)test.cpp -o $@
 
 BinaryTree.o:	$(SRCPATH)BinaryTree.cpp $(HEADERPATH)BinaryTree.h
 	$(CFLAGS)BinaryTree.cpp -o $@
