@@ -1,6 +1,6 @@
 #ifndef BINARYTREE
 #define BINARYTREE
-#include "BinaryTreeNode.h"
+//#include "BinaryTreeNode.h"
 #include "Maxheap.h"
 #include <string>
 
