@@ -1,4 +1,5 @@
 #include <vector>
+#include <string>
 
 using namespace std;
 //to be used with either linked list or BST as bucket
