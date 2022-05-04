@@ -26,7 +26,7 @@ int main (int argc, char *argv[]) {
 	if (outfile.is_open())
 	{
 		//add users for first 2/10 of commands
-		for(int i = 0; i < (k/10)*8; i++)
+		for(int i = 0; i < (k/10)*2; i++)
 		{
 			outfile << "add " << namesarr[rand()%20] << " " << rand()%10000 << endl;
 			totnum++;
