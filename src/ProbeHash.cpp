@@ -1,18 +1,18 @@
 #include "ProbeHash.h"
 
-HashTable::HashTable(int size)
+PHashTable::PHashTable(int size)
 {
 	tableSize = size;
 	cout << "Size allocated: " << tableSize << endl;
 	hash_vect.resize(tableSize);
 }
 		
-int HashTable::hashFunct(int id)
+int PHashTable::hashFunct(int id)
 {
 	return id % tableSize;
 }
 
-int HashTable::addBidder(string name, int id)
+int PHashTable::addBidder(string name, int id)
 {
 	int i = hashFunct(id);
 	
@@ -32,7 +32,7 @@ int HashTable::addBidder(string name, int id)
 	return -1;
 }
 
-int HashTable::findBidder(int id)
+int PHashTable::findBidder(int id)
 {
 	int i = hashFunct(id);
 	
@@ -54,7 +54,7 @@ int HashTable::findBidder(int id)
 	return -1;
 }
 
-int HashTable::assassinateBidder(int id)
+int PHashTable::assassinateBidder(int id)
 {
 	int i = findBidder(id);
 	
@@ -67,7 +67,7 @@ int HashTable::assassinateBidder(int id)
 	}
 }
 
-string HashTable::getBidderName(int id)
+string PHashTable::getBidderName(int id)
 {
 	int i = findBidder(id);
 	if(i < 0)
