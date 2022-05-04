@@ -92,7 +92,18 @@ void Heaparr::print(int k){
         maxHeap.push_back(templist.at(i));
     }
     //put everything back to heap
+}
+
+User Heaparr::popid(int id){
+    if (maxHeap.size() > 0 && id < maxHeap.size()) {
+        std::cout <<maxHeap.at(id).name<<"\t"<<maxHeap.at(id).amount<< "\n ";
+        User tmp = maxHeap.at(id);
+        maxHeap.erase(maxHeap.begin());
+        return tmp;
     }
+    return User();
+}
+
 User Heaparr::pop(){
     if (maxHeap.size() > 0) {
         std::cout <<maxHeap.at(0).name<<"\t"<<maxHeap.at(0).amount<< "\n ";
