@@ -17,7 +17,7 @@ void BinaryTree::add(string name, int id)
     bool lookingForSpot = true;
     if(currentNode == nullptr)
     {
-        headNode = newNode;
+        head = newNode;
         return;
     }
     // Check for empty tree
@@ -103,7 +103,7 @@ string BinaryTree::remove(int id)
             }
 
             // If both the right and left are valid
-            else if (currNode->getLeftChild() != nullptr && currNode->getRightChild() != nullptr)
+            else if (currNode->left != nullptr && currNode->right != nullptr)
             {
                 BTNode * nhold = currNode->left;
                 BTNode * nholdp = currNode;
@@ -118,7 +118,7 @@ string BinaryTree::remove(int id)
                 // cout << minUser->getName() << endl;
                 currNode = nhold;
             }
-            delete currNode
+            delete currNode;
             return nout;
         }
 
