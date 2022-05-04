@@ -23,12 +23,12 @@ struct Node
 	}
 };
 
-class HashTable{
+class PHashTable{
 	private:
 		int tableSize;
 		vector<Node> hash_vect;
 	public:
-		HashTable(int size);
+		PHashTable(int size);
 		int hashFunct(int id);
 		int addBidder(string name, int id);
 		int findBidder(int id);
