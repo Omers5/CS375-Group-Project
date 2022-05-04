@@ -64,6 +64,7 @@ int main (int argc, char *argv[]) {
       } else if(cmdin == "assassinate"){
         cout << "Input \"random\" or int id: ";
         cin >> cmdin;
+        cout << "\"" << cmdin << "\"" << endl;
         //assassinate here
         User userOut;
         if(cmdin == "random")
