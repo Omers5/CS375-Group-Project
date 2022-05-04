@@ -70,7 +70,7 @@ int PHashTable::assassinateBidder(int id)
 string PHashTable::getBidderName(int id)
 {
 	int i = findBidder(id);
-	if(i < 0)
+	if(i < 0 || hash_vect.at(i).STATE != "DELETED")
 		return "-1";
 	else
 		return hash_vect.at(i).name;
