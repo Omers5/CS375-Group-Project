@@ -48,7 +48,7 @@ int main (int argc, char *argv[]) {
 				if(totnum > 0)
 				{
 					//cout << "bid" << endl;
-					outfile << "bid " << rand()%totnum << rand()%10000 << endl;
+					outfile << "bid " << rand()%totnum << " " << rand()%10000 << endl;
 				} else {
 					i--;
 				}
