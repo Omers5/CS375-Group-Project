@@ -1,8 +1,0 @@
-register a
-register b
-register c
-bid 100 a
-bid 100 b
-bid 100 c
-delete
-exit
