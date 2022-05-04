@@ -53,7 +53,7 @@ int main (int argc, char *argv[]) {
         hashT.addBidder(namein, idin);
         User userin(to_string(idin));
         userin.amount = bidin;
-        int iout = maxHeap.insert(User);
+        int iout = maxHeap.insert(userin);
         //output id
         cout << "User " << namein << " with bid " << bidin << " created with id " << idin << endl;
         
@@ -73,7 +73,7 @@ int main (int argc, char *argv[]) {
         int idin;
         cout << "Input int id: ";
         cin >> idin;
-        string nameout = hashT->getBidderName(idin);
+        string nameout = hashT.getBidderName(idin);
         if(nameout == "-1")
         {
           cout << "id " << idin << " not found" << endl;
@@ -115,10 +115,10 @@ int main (int argc, char *argv[]) {
         int idin = idhold;
         idhold++;
         //input data into maxheap and hashtable
-        hashLinked.addBidder(namein, idin);
+        hashLinked->addBidder(namein, idin);
         User userin(to_string(idin));
         userin.amount = bidin;
-        int iout = maxHeap.insert(User);
+        int iout = maxHeap.insert(userin);
         //output id
         cout << "User " << namein << " with bid " << bidin << " created with id " << idin << endl;
         
@@ -138,7 +138,7 @@ int main (int argc, char *argv[]) {
         int idin;
         cout << "Input int id: ";
         cin >> idin;
-        string nameout = getBidderName(idin);
+        string nameout = hashLinked->getBidderName(idin);
         if(nameout == "-1")
         {
           cout << "id " << idin << " not found" << endl;
@@ -184,7 +184,7 @@ int main (int argc, char *argv[]) {
         hashTree->addBidder(namein, idin);
         User userin(to_string(idin));
         userin.amount = bidin;
-        int iout = maxHeap.insert(User);
+        int iout = maxHeap.insert(userin);
         //output id
         cout << "User " << namein << " with bid " << bidin << " created with id " << idin << endl;
         
@@ -226,7 +226,7 @@ int main (int argc, char *argv[]) {
     }
   } else {
     cout << "argv[1] must be between 1-3, inclusive.\nReceived \"" << argv[1] << "\" as argv[1]\n\t(usage: 1 = linear, 2 = linked list, 3 = BST)" << endl;
-    return;
+    return -1;
   }
   return 0;
 }
