@@ -26,7 +26,7 @@ int main (int argc, char *argv[]) {
     cout << "Requires only 1 argument after executable name.\nReceived " << to_string(argc-1) << " arguments after executable." << endl;
     return -1;
   }
-  if(argv[1] == '1')
+  if(argv[1][0] == '1')
   {
     //linear
     cout << "Hash table with linked list buckets selected (using " << TABLESIZE << " buckets, changeable in main.cpp)" << endl;
@@ -92,7 +92,7 @@ int main (int argc, char *argv[]) {
       }
       
     }
-  } else if(argv[1] == '2') {
+  } else if(argv[1][0] == '2') {
     //linked list
     cout << "Hash table with linked list buckets selected (using " << TABLESIZE << " buckets, changeable in main.cpp)" << endl;
     HashTable<LinkedList> *hashLinked = new HashTable<LinkedList>(TABLESIZE);
@@ -158,7 +158,7 @@ int main (int argc, char *argv[]) {
       }
       
     }
-  } else if(argv[1] == '3'){
+  } else if(argv[1][0] == '3'){
     //BST
     cout << "Hash table with linked list buckets selected (using " << TABLESIZE << " buckets, changeable in main.cpp)" << endl;
     HashTable<BinaryTree> *hashTree = new HashTable<BinaryTree>(TABLESIZE);
