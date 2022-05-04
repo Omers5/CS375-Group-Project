@@ -72,8 +72,13 @@ int main (int argc, char *argv[]) {
 				}
       } else {
         //scoreboard
-				cout << "scoreboard" << endl;
-        outfile << "scoreboard " << rand()%totnum << endl;
+	      if(totnum > 0)
+	      {
+					cout << "scoreboard" << endl;
+					outfile << "scoreboard " << rand()%totnum << endl;
+				} else {
+					i--;
+				}
       }
 		}
 		cout << "winner" << endl;
