@@ -12,12 +12,12 @@ struct BTNode
     string name;
     BTNode *right;
     BTNode *left;
-}
+};
 
 class BinaryTree
 {
 private:
-    BinaryTreeNode *head;
+    BTNode *head;
 
 public:
     BinaryTree();
@@ -33,7 +33,7 @@ public:
             delete nin;
         }
     }
-    BinaryTreeNode *getHeadNode() { return headNode; }
+    BTNode *getHeadNode() { return headNode; }
     void add(int id, string name); // Add user to tree and then update heap
     string remove(int id);    // remove that user from the tree
     string getName(int id);
