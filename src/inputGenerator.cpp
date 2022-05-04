@@ -30,28 +30,33 @@ int main (int argc, char *argv[]) {
       int randNum = rand()%6;
       if(randNum == 0) {
         //add
-        
+        cout << "add" << endl;
         outfile << "add " << namesarr[rand()%20] << " " << rand()%10000 << endl;
         totnum++;
       } else if(randNum == 1) {
         //assassinate
-        
+        cout << "assassinate" << endl;
         outfile << "assassinate " << rand()%totnum << endl;
         totnum--;
       } else if(randNum == 2) {
         //bid
+	      cout << "bid" << endl;
         outfile << "bid " << rand()%totnum << rand()%10000 << endl;
       } else if(randNum == 3) {
         //getname
+				cout << "getname" << endl;
         outfile << "getname " << rand()%totnum << endl;
       } else if(randNum == 4) {
         //getbid
+				cout << "getbid" << endl;
         outfile << "getbid " << rand()%totnum << endl;
       } else {
         //scoreboard
+				cout << "scoreboard" << endl;
         outfile << "scoreboard " << rand()%totnum << endl;
       }
 		}
+		cout << "winner" << endl;
     outfile << "winner" << endl;
 		outfile.close();
 	} else {
