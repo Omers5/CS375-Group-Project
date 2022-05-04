@@ -35,21 +35,41 @@ int main (int argc, char *argv[]) {
         totnum++;
       } else if(randNum == 1) {
         //assassinate
-        cout << "assassinate" << endl;
-        outfile << "assassinate " << rand()%totnum << endl;
-        totnum--;
+				if(totnum > 0)
+				{
+					cout << "assassinate" << endl;
+					outfile << "assassinate " << rand()%totnum << endl;
+					totnum--;
+				} else {
+					i--;
+				}
       } else if(randNum == 2) {
         //bid
-	      cout << "bid" << endl;
-        outfile << "bid " << rand()%totnum << rand()%10000 << endl;
+				if(totnum > 0)
+				{
+					cout << "bid" << endl;
+					outfile << "bid " << rand()%totnum << rand()%10000 << endl;
+				} else {
+					i--;
+				}
       } else if(randNum == 3) {
         //getname
-				cout << "getname" << endl;
-        outfile << "getname " << rand()%totnum << endl;
+				if(totnum > 0)
+				{
+					cout << "getname" << endl;
+					outfile << "getname " << rand()%totnum << endl;
+				} else {
+					i--;
+				}
       } else if(randNum == 4) {
         //getbid
-				cout << "getbid" << endl;
-        outfile << "getbid " << rand()%totnum << endl;
+				if(totnum > 0)
+				{
+					cout << "getbid" << endl;
+					outfile << "getbid " << rand()%totnum << endl;
+				} else {
+					i--;
+				}
       } else {
         //scoreboard
 				cout << "scoreboard" << endl;
