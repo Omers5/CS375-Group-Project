@@ -65,6 +65,15 @@ int main (int argc, char *argv[]) {
         cout << "Input \"random\" or int id: ";
         cin >> cmdin;
         //assassinate here
+        User userOut;
+        if(cmdin == "random")
+        {
+          userOut = maxHeap.popRandom();
+        } else {
+          userOut =  maxHeap.popid(cmdin);
+        }
+        string nout = hashT.assassinateBidder(stoi(userOut.name));
+        cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.value << endl;
         //sort
         numberOfUsers--;
         maxHeap.heapSort(numberOfUsers);
@@ -76,8 +85,10 @@ int main (int argc, char *argv[]) {
         cout << "Input int bid to increase original bid by: ";
         cin >> bidin;
         //update bid here
+        int newBid = maxHeap.updateBid(int idin, int bidin);
         //sort
         maxHeap.heapSort(numberOfUsers);
+        cout << "New bid value: " << newBid << endl;
       } else if(cmdin == "getname"){
         int idin;
         cout << "Input int id: ";
@@ -90,7 +101,16 @@ int main (int argc, char *argv[]) {
           cout << "id " << idin << " name is " << nameout << endl;
         }
       } else if(cmdin == "getbid"){
-        
+        int idin;
+        cout << "Input int id: ";
+        cin >> idin;
+        int bidout = maxHeap.getBid(idin);
+        if(bidout == "-1")
+        {
+          cout << "id " << idin << " not found" << endl;
+        } else {
+          cout << "id " << idin << " bid is " << bidout << endl;
+        }
       } else if(cmdin == "winner"){
         User won = scoreboard.pop();
         cout << "Winner of auction is: " << won.getName();
@@ -148,6 +168,15 @@ int main (int argc, char *argv[]) {
         cout << "Input \"random\" or int id: ";
         cin >> cmdin;
         //assassinate here
+        User userOut;
+        if(cmdin == "random")
+        {
+          userOut = maxHeap.popRandom();
+        } else {
+          userOut =  maxHeap.popid(cmdin);
+        }
+        string nout = hashLinked.assassinateBidder(stoi(userOut.name));
+        cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.value << endl;
         //sort
         numberOfUsers--;
         maxHeap.heapSort(numberOfUsers);
@@ -233,6 +262,15 @@ int main (int argc, char *argv[]) {
         cout << "Input \"random\" or int id: ";
         cin >> cmdin;
         //assassinate here
+        User userOut;
+        if(cmdin == "random")
+        {
+          userOut = maxHeap.popRandom();
+        } else {
+          userOut =  maxHeap.popid(cmdin);
+        }
+        string nout = hashTree.assassinateBidder(stoi(userOut.name));
+        cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.value << endl;
         //sort
         numberOfUsers--;
         maxHeap.heapSort(numberOfUsers);
