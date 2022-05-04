@@ -20,7 +20,8 @@ class HashTable
 		{
 			for(int i = 0; i < tableSize; i++)
 			{
-				delete Table.pop_back();
+				//pop_back() also deletes
+				Table.pop_back();
 			}
 		}
 		void addBidder(string name, int id)
