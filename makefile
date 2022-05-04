@@ -39,8 +39,11 @@ runme:	$(OBJECTS)
 test: $(OBJTEST)
 	g++ -g $(OBJTEST) -o $@
 	
-inputGenerator: $(SRCPATH)inputGenerator.cpp
-	g++ -g inputGenerator -o $@
+inputGenerator: $@.0
+	g++ -g $@.o -o $@
+	
+inputGenerator.o: $(SRCPATH)$@.cpp
+	$(CFLAGS)inputGenerator.cpp -o $@
 
 # Specify how the object files should be created from source files
 Main.o: $(SRCPATH)Main.cpp $(HEADERPATH)HashTemplate.h $(HEADERPATH)LinkedList.h
