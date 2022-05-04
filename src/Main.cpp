@@ -15,7 +15,7 @@
 #include "BinaryTree.h"
 #include "Maxheap.h"
 #include "LinkedList.h"
-#include "hashTemplate.h"
+#include "HashTemplate.h"
 #include "ProbeHash.h"
 
 const int TABLESIZE = 10;
