@@ -3,7 +3,7 @@
 PHashTable::PHashTable(int size)
 {
 	tableSize = size;
-	cout << "Size allocated: " << tableSize << endl;
+	//cout << "Size allocated: " << tableSize << endl;
 	hash_vect.resize(tableSize);
 }
 		
@@ -71,7 +71,7 @@ string PHashTable::getBidderName(int id)
 {
 	int i = findBidder(id);
 	if(i < 0)
-		return "error";
+		return "-1";
 	else
 		return hash_vect.at(i).name;
 }
