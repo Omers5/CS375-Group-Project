@@ -70,10 +70,10 @@ int main (int argc, char *argv[]) {
         {
           userOut = maxHeap.popRandom();
         } else {
-          userOut =  maxHeap.popid(cmdin);
+          userOut =  maxHeap.popid(stoi(cmdin));
         }
-        string nout = hashT.assassinateBidder(stoi(userOut.name));
-        cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.value << endl;
+        string nout = stoi(hashT.assassinateBidder(stoi(userOut.name)));
+        cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
         //sort
         numberOfUsers--;
         maxHeap.heapSort(numberOfUsers);
@@ -85,7 +85,7 @@ int main (int argc, char *argv[]) {
         cout << "Input int bid to increase original bid by: ";
         cin >> bidin;
         //update bid here
-        int newBid = maxHeap.updateBid(int idin, int bidin);
+        int newBid = maxHeap.updateBid(idin, bidin);
         if(newBid == -1)
         {
           cout << "id " << idin << " not found" << endl;
@@ -110,14 +110,14 @@ int main (int argc, char *argv[]) {
         cout << "Input int id: ";
         cin >> idin;
         int bidout = maxHeap.getBid(idin);
-        if(bidout == "-1")
+        if(bidout == -1)
         {
           cout << "id " << idin << " not found" << endl;
         } else {
           cout << "id " << idin << " bid is " << bidout << endl;
         }
       } else if(cmdin == "winner"){
-        User won = scoreboard.pop();
+        User won = maxHeap.pop();
         cout << "Winner of auction is: " << won.getName();
         lhold = false;
       } else if(cmdin == "exit"){
@@ -178,10 +178,10 @@ int main (int argc, char *argv[]) {
         {
           userOut = maxHeap.popRandom();
         } else {
-          userOut =  maxHeap.popid(cmdin);
+          userOut =  maxHeap.popid(stoi(cmdin));
         }
-        string nout = hashLinked.assassinateBidder(stoi(userOut.name));
-        cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.value << endl;
+        string nout = hashLinked->assassinateBidder(stoi(userOut.name));
+        cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
         //sort
         numberOfUsers--;
         maxHeap.heapSort(numberOfUsers);
@@ -193,7 +193,7 @@ int main (int argc, char *argv[]) {
         cout << "Input int bid to increase original bid by: ";
         cin >> bidin;
         //update bid here
-        int newBid = maxHeap.updateBid(int idin, int bidin);
+        int newBid = maxHeap.updateBid(idin, bidin);
         if(newBid == -1)
         {
           cout << "id " << idin << " not found" << endl;
@@ -218,14 +218,14 @@ int main (int argc, char *argv[]) {
         cout << "Input int id: ";
         cin >> idin;
         int bidout = maxHeap.getBid(idin);
-        if(bidout == "-1")
+        if(bidout == -1)
         {
           cout << "id " << idin << " not found" << endl;
         } else {
           cout << "id " << idin << " bid is " << bidout << endl;
         }
       } else if(cmdin == "winner"){
-        User won = scoreboard.pop();
+        User won = maxHeap.pop();
         cout << "Winner of auction is: " << won.getName();
         delete hashLinked;
         lhold = false;
@@ -290,8 +290,8 @@ int main (int argc, char *argv[]) {
         } else {
           userOut =  maxHeap.popid(cmdin);
         }
-        string nout = hashTree.assassinateBidder(stoi(userOut.name));
-        cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.value << endl;
+        string nout = hashTree->assassinateBidder(stoi(userOut.name));
+        cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
         //sort
         numberOfUsers--;
         maxHeap.heapSort(numberOfUsers);
@@ -303,7 +303,7 @@ int main (int argc, char *argv[]) {
         cout << "Input int bid to increase original bid by: ";
         cin >> bidin;
         //update bid here
-        int newBid = maxHeap.updateBid(int idin, int bidin);
+        int newBid = maxHeap.updateBid(idin, bidin);
         if(newBid == -1)
         {
           cout << "id " << idin << " not found" << endl;
@@ -328,14 +328,14 @@ int main (int argc, char *argv[]) {
         cout << "Input int id: ";
         cin >> idin;
         int bidout = maxHeap.getBid(idin);
-        if(bidout == "-1")
+        if(bidout == -1)
         {
           cout << "id " << idin << " not found" << endl;
         } else {
           cout << "id " << idin << " bid is " << bidout << endl;
         }
       } else if(cmdin == "winner"){
-        User won = scoreboard.pop();
+        User won = maxHeap.pop();
         cout << "Winner of auction is: " << won.getName();
         delete hashTree;
         lhold = false;
