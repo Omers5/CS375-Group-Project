@@ -97,7 +97,7 @@ int main (int argc, char *argv[]) {
       getline(iss, idin, ' ');
       getline(iss, bidin, ' ');
       //update bid here
-      int newBid = maxHeap.updateBid(idin, bidin);
+      int newBid = maxHeap.updateBid(stoi(idin), bidin);
       if(newBid == -1)
       {
         cout << "id " << idin << " not found" << endl;
@@ -109,7 +109,7 @@ int main (int argc, char *argv[]) {
     } else if(cmdin == "getname"){
       string idin;
       getline(iss, idin, ' ');
-      string nameout = hashT.getBidderName(idin);
+      string nameout = hashT.getBidderName(stoi(idin));
       if(nameout == "-1")
       {
         cout << "id " << idin << " not found" << endl;
@@ -119,7 +119,7 @@ int main (int argc, char *argv[]) {
     } else if(cmdin == "getbid"){
       string idin;
       getline(iss, idin, ' ');
-      int bidout = maxHeap.getBid(idin);
+      int bidout = maxHeap.getBid(stoi(idin));
       if(bidout == -1)
       {
         cout << "id " << idin << " not found" << endl;
@@ -135,11 +135,11 @@ int main (int argc, char *argv[]) {
       cout << "Exiting..." << endl;
       i = commandsin.size();
     } else if(cmdin == "scoreboard"){
-      string amount;
-      getline(iss, amount, ' ');
+      string k;
+      getline(iss, k, ' ');
       cout << "\nSCOREBOARD";
       cout << "\n-----------------\n";
-      maxHeap.print(k);
+      maxHeap.print(stoi(k));
       maxHeap.heapSort(numberOfUsers);
       cout << "\n-----------------\n";
     }
@@ -152,13 +152,13 @@ int main (int argc, char *argv[]) {
   start = chrono::system_clock::now();
   HashTable<LinkedList> *hashLinked = new HashTable<LinkedList>(TABLESIZE);
   Heaparr maxHeap2;
-  int idhold = 1;
-  int numberOfUsers = 0;
+  idhold = 1;
+  numberOfUsers = 0;
   for(int i = 0; i < commandsin.size(); i++)
   {
     istringstream iss(line);
-    string hold;
-    getline(iss, hold, ' ');
+    string cmdin;
+    getline(iss, cmdin, ' ');
     if(cmdin == "add"){
       //get bidder name and value
       string namein;
