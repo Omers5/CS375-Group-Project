@@ -1,601 +1,601 @@
+add Emma 886
+add Evelyn 6915
+add Isabella 8335
+add Elijah 492
 add Sophia 1421
-bid 08690
-assassinate 0
-add Elijah 9172
-getbid 0
-bid 06429
-bid 02862
-assassinate 0
+add Noah 27
+add James 59
+add Emma 3926
+add Liam 3426
+add Benjamin 5736
+add Amelia 5368
+add Charlotte 6429
+add Noah 1530
+add Noah 5123
+add Charlotte 3135
+add Sophia 9802
 add Noah 3058
-scoreboard 0
-assassinate 0
+add Sophia 8167
+add Isabella 8456
+add Amelia 8042
+add Sophia 7373
+add Olivia 4919
+add Oliver 8537
+add Alexander 4324
+add Mia 4370
 add Isabella 3526
-assassinate 0
-add Mia 9582
-getname 0
-getname 0
-bid 03750
-assassinate 0
-add Alexander 5788
+add Amelia 8980
+add Henry 1873
+add Noah 9170
+add Henry 7281
+add Ava 925
+add Oliver 6327
+add Henry 6505
+add Elijah 1729
+add Isabella 5857
+add Oliver 3895
+add Noah 545
+add Lucas 3367
+add Lucas 364
+add Emma 3750
+add Charlotte 6808
+add Henry 7178
+add William 3584
 add Emma 2651
-bid 19932
+add Lucas 2399
+add Benjamin 5060
 add Henry 3368
-assassinate 1
-getbid 0
-add Harper 795
-getbid 2
-getbid 2
-getname 2
-bid 0492
-getbid 2
-assassinate 2
-bid 13865
-scoreboard 0
-scoreboard 0
-getname 1
-assassinate 1
-scoreboard 0
-scoreboard 0
-assassinate 0
-add Ava 5306
-scoreboard 0
-bid 02871
-bid 09503
-scoreboard 0
+add Harper 12
+add Elijah 8586
+add Lucas 7539
+add Mia 570
+add Lucas 378
+add Charlotte 6601
+add Evelyn 2902
+add Evelyn 492
+add Benjamin 756
+add Olivia 280
+add Elijah 9441
+add Ava 9689
+add Oliver 6619
+add Liam 4729
+add Amelia 8117
+add Evelyn 5771
+add Olivia 675
+add Sophia 8927
+add Charlotte 7856
+add Evelyn 2353
+add Elijah 6965
+add Elijah 4683
+add Harper 8624
+add William 2871
+add Benjamin 8829
+add Emma 19
+add James 3368
 add William 6715
-getbid 1
-add Emma 2618
-assassinate 2
-getname 1
-scoreboard 1
-getbid 0
-bid 12350
-assassinate 0
-bid 0124
-getbid 0
-bid 06491
-scoreboard 0
-getname 0
-getbid 0
-scoreboard 0
-scoreboard 0
-add Olivia 8858
-assassinate 1
-assassinate 0
-add Sophia 8776
-getbid 0
-assassinate 0
-add William 7369
-getname 0
+add Liam 8149
+add Henry 723
+add Alexander 2245
+add Elijah 3451
+add Olivia 3555
+add Harper 7488
+add Oliver 8228
+add Olivia 2350
+add Isabella 1500
+add Lucas 7764
+add Oliver 4914
+add Charlotte 5856
+add Emma 6491
+add Charlotte 8365
+add Harper 1936
+add Benjamin 2551
+add Evelyn 9228
+add Mia 5407
+add Lucas 6121
+add Alexander 4395
+add Sophia 1237
+add Mia 3793
+add Alexander 4428
+add Emma 1011
+add William 9529
+add Henry 2404
+add Emma 5763
+add Isabella 4538
+add Elijah 6840
+add Oliver 4818
+add William 688
+add Sophia 7917
+add Evelyn 6996
 add Oliver 7743
-add Emma 8490
-scoreboard 1
-scoreboard 1
+add James 2183
+add James 5499
+add Benjamin 6725
+add Oliver 5590
 add Ava 8139
-bid 27669
-bid 28464
-assassinate 3
+add Lucas 9786
+add Sophia 8082
+add Noah 8464
+add Evelyn 9507
+add Mia 8804
+add William 8611
+bid 108 9299
+getname 106
+bid 100 5422
+scoreboard 10
 getname 1
-bid 23622
-add Harper 7343
-getbid 0
-getbid 2
-scoreboard 2
-getname 1
-assassinate 2
-getbid 2
+assassinate 90
+getbid 7
 add Henry 9444
 add Noah 3465
-bid 18282
-bid 47637
+bid 0 8282
+bid 37 7637
 add Oliver 2600
 add Benjamin 1899
-getname 3
-bid 1973
-scoreboard 5
-getbid 4
-bid 3163
-assassinate 5
-scoreboard 4
-getname 3
-assassinate 0
-bid 02926
-bid 41340
-getbid 4
+getname 91
+bid 77 973
+scoreboard 51
+getbid 10
+bid 94 163
+assassinate 89
+scoreboard 52
+getname 45
+assassinate 82
+bid 28 2926
+bid 103 1340
+getbid 45
 add Noah 5936
-assassinate 3
+assassinate 11
 add Harper 8418
-scoreboard 2
-getbid 4
-getname 3
-bid 26342
-scoreboard 0
-getname 1
-add Olivia 1255
+scoreboard 102
+getbid 64
+getname 27
+bid 76 6342
 scoreboard 6
-getname 2
-assassinate 3
-bid 51705
+getname 61
+add Olivia 1255
+scoreboard 64
+getname 101
+assassinate 34
+bid 11 1705
 add Charlotte 9150
 add Alexander 3920
-getbid 6
-scoreboard 4
-assassinate 6
-bid 51972
-bid 37625
-getname 2
-assassinate 4
-bid 2713
-bid 2524
-bid 58581
-getname 4
+getbid 58
+scoreboard 92
+assassinate 82
+bid 31 1972
+bid 92 7625
+getname 29
+assassinate 19
+bid 94 713
+bid 112 524
+bid 3 8581
+getname 102
 add Mia 5994
-getbid 2
-scoreboard 1
-bid 07255
-getbid 5
+getbid 74
 scoreboard 3
-assassinate 4
-scoreboard 1
-bid 11961
-bid 04259
-getbid 4
-getbid 2
-bid 12842
+bid 3 7255
+getbid 34
+scoreboard 55
+assassinate 31
+scoreboard 97
+bid 91 1961
+bid 22 4259
+getbid 116
+getbid 74
+bid 65 2842
 add William 5189
-getbid 4
+getbid 33
 add Alexander 8036
 add Isabella 6248
-getname 1
-assassinate 8
+getname 83
+assassinate 23
 add Lucas 7567
 add William 9529
-bid 63788
-scoreboard 9
-getbid 3
-assassinate 3
-scoreboard 5
-getbid 0
-getname 8
-getbid 7
-bid 63729
-getbid 3
-bid 3460
-bid 88027
-bid 57556
-bid 87697
-assassinate 1
-scoreboard 2
+bid 12 3788
+scoreboard 47
+getbid 55
+assassinate 69
+scoreboard 3
+getbid 61
+getname 27
+getbid 100
+bid 32 3729
+getbid 85
+bid 46 460
+bid 28 8027
+bid 123 7556
+bid 44 7697
+assassinate 43
+scoreboard 66
 add Emma 4500
-scoreboard 8
+scoreboard 22
 add Harper 5151
-scoreboard 4
-assassinate 2
-getname 0
+scoreboard 68
+assassinate 74
+getname 2
 add Sophia 49
 add Ava 6429
-scoreboard 10
-getname 3
-getbid 1
-scoreboard 8
-scoreboard 7
+scoreboard 32
+getname 72
+getbid 72
+scoreboard 90
+scoreboard 36
 add Mia 743
 add Sophia 8390
 add Liam 3541
-getname 10
-bid 76042
+getname 86
+bid 101 6042
 add Evelyn 8023
-scoreboard 6
-getname 0
-getname 11
-getname 2
+scoreboard 56
+getname 106
+getname 7
+getname 91
 add James 1626
-getbid 9
-bid 08205
-bid 87386
-getbid 10
+getbid 41
+bid 56 8205
+bid 44 7386
+getbid 54
 add Lucas 4916
-bid 43529
+bid 61 3529
 add James 2647
-getbid 15
+getbid 93
 add Amelia 8593
-assassinate 8
-bid 109214
-assassinate 14
-bid 69479
-bid 06189
-bid 17641
-bid 138987
-getbid 10
-getbid 16
-getbid 12
-getname 0
-getbid 9
-scoreboard 15
-assassinate 1
+assassinate 82
+bid 68 9214
+assassinate 54
+bid 51 9479
+bid 7 6189
+bid 128 7641
+bid 30 8987
+getbid 41
+getbid 124
+getbid 51
+getname 31
+getbid 20
+scoreboard 63
+assassinate 60
 add Ava 783
-assassinate 9
-scoreboard 5
-getname 3
-assassinate 14
-getname 4
-getname 9
+assassinate 22
+scoreboard 113
+getname 127
+assassinate 18
+getname 116
+getname 47
 add Harper 3618
-getbid 9
+getbid 29
 add Lucas 1233
-assassinate 5
-getname 6
-getbid 11
-assassinate 15
-scoreboard 13
-getbid 4
+assassinate 28
+getname 102
+getbid 7
 assassinate 7
-getname 8
+scoreboard 62
+getbid 67
+assassinate 123
+getname 42
 add James 4292
-assassinate 2
-getname 13
-scoreboard 4
-scoreboard 7
-assassinate 11
-assassinate 6
-bid 64030
-bid 51081
-getbid 4
-getbid 3
-getname 8
+assassinate 95
+getname 101
+scoreboard 124
+scoreboard 87
+assassinate 81
+assassinate 47
+bid 126 4030
+bid 61 1081
+getbid 12
+getbid 71
+getname 36
 getbid 2
-getbid 6
-getname 6
+getbid 50
+getname 114
 add Benjamin 5379
-getname 8
-bid 64176
-getname 11
-assassinate 10
-getbid 3
-getname 11
-getbid 8
-getbid 6
+getname 52
+bid 111 4176
+getname 116
+assassinate 45
+getbid 91
+getname 31
+getbid 84
+getbid 10
 scoreboard 3
-getname 8
-getname 5
-bid 77375
-scoreboard 6
-assassinate 4
-getname 2
-getname 3
-bid 76717
-bid 51574
-getbid 2
+getname 60
+getname 13
+bid 27 7375
+scoreboard 14
+assassinate 24
+getname 17
+getname 22
+bid 106 6717
+bid 28 1574
+getbid 78
 add Isabella 543
 add Lucas 4713
-scoreboard 1
+scoreboard 92
 add Mia 7088
-getname 4
-bid 41017
-bid 91137
-getname 1
-scoreboard 1
-bid 19291
-bid 47217
+getname 90
+bid 24 1017
+bid 5 1137
+getname 73
+scoreboard 13
+bid 65 9291
+bid 18 7217
 add Emma 5055
-getbid 8
+getbid 54
 add Oliver 8571
-getname 1
-getname 5
-getname 12
-assassinate 13
-getbid 3
-scoreboard 0
-bid 04639
-assassinate 5
-assassinate 4
-assassinate 9
+getname 81
+getname 73
+getname 36
+assassinate 65
+getbid 105
+scoreboard 111
+bid 80 4639
+assassinate 116
+assassinate 86
+assassinate 21
 add Olivia 865
 add Henry 7955
 add Alexander 9211
 add Benjamin 5196
-assassinate 9
-bid 144172
-scoreboard 9
-getbid 3
-bid 135830
-scoreboard 2
+assassinate 105
+bid 62 4172
+scoreboard 130
+getbid 115
+bid 105 5830
+scoreboard 118
 add James 573
-bid 117522
-getname 12
+bid 55 7522
+getname 104
 add Mia 1232
-getbid 13
-getname 11
+getbid 116
+getname 77
 add Liam 4278
-assassinate 14
+assassinate 132
 add Emma 1041
-getbid 13
-bid 109122
+getbid 11
+bid 24 9122
 add Mia 5821
-scoreboard 10
-getname 6
-bid 115218
-scoreboard 1
-assassinate 17
 scoreboard 15
+getname 16
+bid 99 5218
+scoreboard 73
+assassinate 68
+scoreboard 81
 add Elijah 5797
 add Oliver 1308
 add Alexander 991
 add Alexander 2715
 add Amelia 8189
-scoreboard 10
+scoreboard 83
 add Henry 8224
-assassinate 3
+assassinate 79
 add Alexander 8109
-getname 17
-getbid 18
-scoreboard 18
-assassinate 11
-assassinate 10
-scoreboard 8
-bid 113875
+getname 81
+getbid 98
+scoreboard 106
+assassinate 67
+assassinate 6
+scoreboard 86
+bid 19 3875
 add Harper 6590
-getbid 8
-getname 2
-getname 18
-scoreboard 1
-getname 17
-scoreboard 19
-scoreboard 11
-scoreboard 6
-getname 20
-getbid 1
-getname 2
-getbid 16
-getname 16
-assassinate 11
-bid 19999
+getbid 5
+getname 133
+getname 113
+scoreboard 127
+getname 23
+scoreboard 100
+scoreboard 128
+scoreboard 120
+getname 118
+getbid 132
+getname 5
+getbid 68
+getname 105
+assassinate 16
+bid 69 9999
 add Evelyn 7483
-getbid 21
-scoreboard 19
-getname 7
-bid 104266
-assassinate 15
+getbid 16
+scoreboard 131
+getname 11
+bid 64 4266
+assassinate 102
 add Amelia 7685
-getbid 7
-getbid 11
-getname 10
-getbid 17
-getbid 11
-getname 8
-assassinate 0
-add Henry 1360
-bid 0337
-getbid 10
+getbid 5
+getbid 87
 getname 18
+getbid 111
+getbid 78
+getname 65
 assassinate 17
-scoreboard 9
-getbid 19
-scoreboard 16
-bid 112350
-getname 15
-getname 4
-scoreboard 1
-getname 15
-bid 18639
-bid 86610
+add Henry 1360
+bid 132 337
+getbid 95
+getname 64
+assassinate 26
+scoreboard 29
+getbid 99
+scoreboard 108
+bid 117 2350
+getname 81
+getname 30
+scoreboard 25
+getname 57
+bid 0 639
+bid 66 6610
 scoreboard 9
 add Henry 5199
-getbid 4
-scoreboard 10
-scoreboard 21
-getbid 20
-assassinate 20
-assassinate 8
-bid 113195
-add Ava 5266
-getbid 14
-getbid 2
-scoreboard 10
-getname 17
-getbid 20
-assassinate 4
-scoreboard 17
-assassinate 13
-assassinate 2
-scoreboard 13
-getbid 1
-getbid 9
-scoreboard 2
-getname 6
-scoreboard 13
-getbid 2
-getbid 6
 getbid 10
-bid 66217
+scoreboard 11
+scoreboard 66
+getbid 51
+assassinate 9
+assassinate 30
+bid 13 3195
+add Ava 5266
+getbid 134
+getbid 86
+scoreboard 124
+getname 67
+getbid 24
+assassinate 134
+scoreboard 100
+assassinate 63
+assassinate 6
+scoreboard 23
+getbid 4
+getbid 51
+scoreboard 125
+getname 89
+scoreboard 92
+getbid 76
+getbid 87
+getbid 77
+bid 44 6217
 add Isabella 9015
 add Amelia 6364
-bid 192491
-bid 23537
-scoreboard 7
-getname 11
-getname 8
-getbid 2
+bid 1 2491
+bid 102 3537
+scoreboard 52
+getname 38
+getname 61
+getbid 110
 add Benjamin 7665
 assassinate 5
-assassinate 14
-scoreboard 11
-bid 06506
+assassinate 121
+scoreboard 63
+bid 68 6506
 add Charlotte 9364
-getname 16
-bid 149875
-getname 16
-bid 174969
-getbid 5
-bid 162760
-scoreboard 10
-scoreboard 9
+getname 55
+bid 18 9875
+getname 120
+bid 113 4969
+getbid 134
+bid 132 2760
+scoreboard 3
+scoreboard 51
 add Elijah 183
-getname 15
-assassinate 0
-assassinate 13
+getname 55
+assassinate 42
+assassinate 36
 add Sophia 109
-assassinate 16
-bid 154548
-getname 17
-scoreboard 13
-bid 99355
-scoreboard 13
-getbid 16
-getbid 13
-assassinate 6
-getname 7
+assassinate 129
+bid 103 4548
+getname 125
 scoreboard 9
-getname 12
-scoreboard 9
-assassinate 1
-bid 81075
-getbid 16
-bid 13919
-scoreboard 4
-getname 2
-assassinate 0
-assassinate 12
-getname 7
-add Henry 5981
-getname 8
-scoreboard 7
-getbid 6
-scoreboard 3
-bid 65002
-bid 29718
-add Emma 2377
-assassinate 10
-assassinate 16
-getbid 13
-scoreboard 13
-add Alexander 3141
-scoreboard 12
-bid 35393
-assassinate 11
-assassinate 14
-getname 14
-getbid 10
-bid 47719
-add Olivia 8902
-getbid 8
-bid 158789
-getbid 12
-assassinate 10
-assassinate 8
-getname 6
-bid 137690
-scoreboard 13
-add James 9421
-getname 9
-scoreboard 0
-getname 0
-assassinate 4
-add Lucas 2386
-scoreboard 12
-scoreboard 10
-scoreboard 0
-scoreboard 8
-assassinate 9
-bid 51499
-scoreboard 5
-bid 47330
-getbid 13
-scoreboard 3
-add Olivia 5011
-bid 34387
-bid 126773
-scoreboard 9
+bid 5 9355
+scoreboard 57
 getbid 4
-add Oliver 139
-getname 15
-getbid 1
-add Sophia 8705
-getbid 4
-getname 0
-assassinate 2
-scoreboard 15
+getbid 93
+assassinate 30
 getname 13
-bid 74802
+scoreboard 130
+getname 96
+scoreboard 20
 assassinate 10
-assassinate 0
-scoreboard 0
-bid 92557
-scoreboard 1
-getbid 0
-scoreboard 10
+bid 120 1075
+getbid 84
+bid 75 3919
+scoreboard 108
+getname 114
+assassinate 100
+assassinate 101
+getname 59
+add Henry 5981
+getname 93
+scoreboard 65
+getbid 28
+scoreboard 127
+bid 13 5002
+bid 119 9718
+add Emma 2377
+assassinate 48
+assassinate 41
+getbid 21
+scoreboard 117
+add Alexander 3141
+scoreboard 32
+bid 64 5393
+assassinate 130
+assassinate 122
+getname 66
+getbid 96
+bid 0 7719
+add Olivia 8902
+getbid 40
+bid 95 8789
+getbid 116
+assassinate 62
 assassinate 5
-scoreboard 11
+getname 120
+bid 15 7690
+scoreboard 61
+add James 9421
+getname 70
+scoreboard 115
+getname 85
+assassinate 84
+add Lucas 2386
+scoreboard 98
+scoreboard 38
+scoreboard 17
+scoreboard 120
+assassinate 13
+bid 69 1499
+scoreboard 89
+bid 52 7330
+getbid 25
+scoreboard 95
+add Olivia 5011
+bid 20 4387
+bid 127 6773
+scoreboard 94
+getbid 106
+add Oliver 139
+getname 67
+getbid 77
+add Sophia 8705
+getbid 56
+getname 99
+assassinate 16
+scoreboard 67
+getname 85
+bid 11 4802
+assassinate 18
+assassinate 117
+scoreboard 120
+bid 91 2557
+scoreboard 43
+getbid 32
+scoreboard 82
+assassinate 33
+scoreboard 24
 add Alexander 4447
 add Ava 4882
-assassinate 9
-getname 13
-bid 19426
-bid 123036
+assassinate 72
+getname 59
+bid 83 9426
+bid 4 3036
 add Charlotte 6092
-assassinate 14
-assassinate 6
+assassinate 15
+assassinate 60
 add Elijah 5994
 add Emma 8437
 scoreboard 14
-getname 2
-scoreboard 12
-scoreboard 5
-bid 87069
-getname 5
-bid 116295
-assassinate 14
-scoreboard 12
-bid 55340
-assassinate 9
-bid 94089
-getname 6
+getname 62
+scoreboard 25
+scoreboard 86
+bid 5 7069
+getname 81
+bid 54 6295
+assassinate 113
+scoreboard 76
+bid 91 5340
+assassinate 23
+bid 91 4089
+getname 7
 add Benjamin 3050
-getbid 2
-getname 13
+getbid 114
+getname 103
 add Harper 3370
-bid 135115
-scoreboard 7
-scoreboard 2
-getname 13
-bid 146202
-scoreboard 1
-add Evelyn 1804
-scoreboard 10
-scoreboard 10
-getname 15
-bid 58972
-getbid 10
-add Ava 356
-bid 145472
-add Harper 8111
-scoreboard 9
-assassinate 5
-bid 12339
-getbid 9
-getbid 3
-assassinate 4
-scoreboard 5
-assassinate 12
-getbid 12
-bid 11279
-bid 13635
-getname 13
-scoreboard 6
-getname 5
-add Liam 4584
-scoreboard 3
-add Benjamin 5609
-bid 92939
-getname 14
-bid 22606
-getbid 16
-assassinate 15
-getname 2
-assassinate 0
-assassinate 11
-bid 131079
-getname 1
-assassinate 8
-assassinate 2
+bid 11 5115
+scoreboard 13
+scoreboard 79
 winner
