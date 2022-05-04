@@ -119,7 +119,7 @@ int main (int argc, char *argv[]) {
         }
       } else if(cmdin == "winner"){
         User won = maxHeap.pop();
-        string name = hashT.getBidderName(won.getName());
+        string name = hashT.getBidderName(stoi(won.getName()));
         cout << "Winner of auction is " << name << " with id " << won.getName();
         delete hashTree;
         lhold = false;
@@ -229,7 +229,7 @@ int main (int argc, char *argv[]) {
         }
       } else if(cmdin == "winner"){
         User won = maxHeap.pop();
-        string name = hashLinked->getBidderName(won.getName());
+        string name = hashLinked->getBidderName(stoi(won.getName()));
         cout << "Winner of auction is " << name << " with id " << won.getName();
         delete hashTree;
         lhold = false;
@@ -340,7 +340,7 @@ int main (int argc, char *argv[]) {
         }
       } else if(cmdin == "winner"){
         User won = maxHeap.pop();
-        string name = hashTree->getBidderName(won.getName());
+        string name = hashTree->getBidderName(stoi(won.getName()));
         cout << "Winner of auction is " << name << " with id " << won.getName();
         delete hashTree;
         lhold = false;
