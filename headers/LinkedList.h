@@ -33,22 +33,31 @@ class LinkedList
     }
     void add(string name, int id)
     {
-      LLNode* hold = head;
-      LLNode* holdp = head;
-      while(hold != nullptr)
+      if(head != nullptr)
       {
-        if(id == hold->id)
+        LLNode* hold = head;
+        LLNode* holdp = head;
+        while(hold != nullptr)
         {
-          //?? what to do about this?
+          if(id == hold->id)
+          {
+            //?? what to do about this?
+          }
+          holdp = hold;
+          hold = hold->next;
         }
-        holdp = hold;
-        hold = hold->next;
+        LLNode* holdin = new LLNode();
+        holdin->id = id;
+        holdin->name = name;
+        holdin->next = nullptr;
+        holdp->next = holdin;
+      } else {
+        LLNode* holdin = new LLNode();
+        holdin->id = id;
+        holdin->name = name;
+        holdin->next = nullptr;
+        head = holdin;
       }
-      LLNode* holdin = new LLNode();
-      holdin->id = id;
-      holdin->name = name;
-      holdin->next = nullptr;
-      holdp->next = holdin;
     }
     //return name
     string remove(int id)
@@ -59,7 +68,12 @@ class LinkedList
       {
         if(id == hold->id)
         {
-          holdp->next = hold->next;
+          if(hold == head)
+          {
+            head = head->next;
+          } else {
+            holdp->next = hold->next;
+          }
           string nout = hold->name;
           delete hold;
           return nout;
