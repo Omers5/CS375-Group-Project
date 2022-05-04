@@ -31,7 +31,7 @@ class LinkedList
         delete hold;
       }
     }
-    void add(int id, string name)
+    void add(string name, int id)
     {
       LLNode* hold = head;
       LLNode* holdp = head;
