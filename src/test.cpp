@@ -50,11 +50,11 @@ int main (int argc, char *argv[]) {
   Heaparr maxHeap;
   int idhold = 1;
   int numberOfUsers = 0;
-  for(int i = 0; i < commandsin.size; i++)
+  for(int i = 0; i < commandsin.size(); i++)
   {
     istringstream iss(line);
-    string hold;
-    getline(iss, hold, ' ');
+    string cmdin;
+    getline(iss, cmdin, ' ');
     if(cmdin == "add"){
       //get bidder name and value
       string namein;
@@ -130,10 +130,10 @@ int main (int argc, char *argv[]) {
       User won = maxHeap.pop();
       string name = hashT.getBidderName(stoi(won.getName()));
       cout << "Winner of auction is " << name << " with id " << won.getName();
-      i = commandsin.size;
+      i = commandsin.size();
     } else if(cmdin == "exit"){
       cout << "Exiting..." << endl;
-      i = commandsin.size;
+      i = commandsin.size();
     } else if(cmdin == "scoreboard"){
       string amount;
       getline(iss, amount, ' ');
@@ -154,7 +154,7 @@ int main (int argc, char *argv[]) {
   Heaparr maxHeap2;
   int idhold = 1;
   int numberOfUsers = 0;
-  for(int i = 0; i < commandsin.size; i++)
+  for(int i = 0; i < commandsin.size(); i++)
   {
     istringstream iss(line);
     string hold;
@@ -235,11 +235,11 @@ int main (int argc, char *argv[]) {
       string name = hashLinked->getBidderName(stoi(won.getName()));
       cout << "Winner of auction is " << name << " with id " << won.getName();
       //delete hashLinked;
-      i = commandsin.size;
+      i = commandsin.size();
     } else if(cmdin == "exit"){
       cout << "Exiting..." << endl;
       //delete hashLinked;
-      i = commandsin.size;
+      i = commandsin.size();
     } else if(cmdin == "scoreboard"){
       string amount;
       getline(iss, amount, ' ');
@@ -259,7 +259,7 @@ int main (int argc, char *argv[]) {
   Heaparr maxHeap3;
   int idhold = 1;
   int numberOfUsers = 0;
-  for(int i = 0; i < commandsin.size; i++)
+  for(int i = 0; i < commandsin.size(); i++)
   {
     istringstream iss(line);
     string hold;
@@ -340,11 +340,11 @@ int main (int argc, char *argv[]) {
       string name = hashTree->getBidderName(stoi(won.getName()));
       cout << "Winner of auction is " << name << " with id " << won.getName();
       //delete hashTree;
-      i = commandsin.size;
+      i = commandsin.size();
     } else if(cmdin == "exit"){
       cout << "Exiting..." << endl;
       //delete hashTree;
-      i = commandsin.size;
+      i = commandsin.size();
     } else if(cmdin == "scoreboard"){
       string amount;
       getline(iss, amount, ' ');
