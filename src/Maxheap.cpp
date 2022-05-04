@@ -132,7 +132,7 @@ int Heaparr::getBid(int id)
 {
     for(int i = 0; i < maxHeap.size(); i++)
     {
-        if(maxHeap.at(i).id == id)
+        if(stoi(maxHeap.at(i).name) == id)
         {
             //std::cout <<maxHeap.at(i).name<<"\t"<<maxHeap.at(i).amount<< "\n ";
             return maxHeap.at(i).amount;
@@ -145,7 +145,7 @@ int Heaparr::updateBid(int id, int valuein)
 {
     for(int i = 0; i < maxHeap.size(); i++)
     {
-        if(maxHeap.at(i).id == id)
+        if(stoi(maxHeap.at(i).name) == id)
         {
             //std::cout <<maxHeap.at(i).name<<"\t"<<maxHeap.at(i).amount<< "\n ";
             maxHeap.at(i).addBid(valuein);
