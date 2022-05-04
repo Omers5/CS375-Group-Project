@@ -14,7 +14,7 @@ const string namesarr[20] = {"Liam", "Olivia", "Noah", "Emma", "Oliver",
                              "Mia", "Henry", "Evelyn", "Alexander", "Harper"};
 
 int main (int argc, char *argv[]) {
-  if(argc != 2)
+  if(argc != 3)
   {
     cout << "Expecting two arguments: ./" << argv[0] << " <filename> <int k>\n\tk is number of instructions" << endl;
     return -1;
