@@ -33,7 +33,7 @@ public:
             delete nin;
         }
     }
-    BTNode *getHeadNode() { return headNode; }
+    BTNode *getHeadNode() { return head; }
     void add(int id, string name); // Add user to tree and then update heap
     string remove(int id);    // remove that user from the tree
     string getName(int id);
