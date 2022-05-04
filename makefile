@@ -39,7 +39,7 @@ runme:	$(OBJECTS)
 test: $(OBJTEST)
 	g++ -g $(OBJTEST) -o $@
 	
-inputGenerator: $@.0
+inputGenerator: $@.o
 	g++ -g $@.o -o $@
 	
 inputGenerator.o: $(SRCPATH)$@.cpp
