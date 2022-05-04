@@ -86,9 +86,14 @@ int main (int argc, char *argv[]) {
         cin >> bidin;
         //update bid here
         int newBid = maxHeap.updateBid(int idin, int bidin);
+        if(newBid == -1)
+        {
+          cout << "id " << idin << " not found" << endl;
+        } else {
+          cout << "id " << idin << " new bid is " << newBid << endl;
+        }
         //sort
         maxHeap.heapSort(numberOfUsers);
-        cout << "New bid value: " << newBid << endl;
       } else if(cmdin == "getname"){
         int idin;
         cout << "Input int id: ";
@@ -188,6 +193,13 @@ int main (int argc, char *argv[]) {
         cout << "Input int bid to increase original bid by: ";
         cin >> bidin;
         //update bid here
+        int newBid = maxHeap.updateBid(int idin, int bidin);
+        if(newBid == -1)
+        {
+          cout << "id " << idin << " not found" << endl;
+        } else {
+          cout << "id " << idin << " new bid is " << newBid << endl;
+        }
         //sort
         maxHeap.heapSort(numberOfUsers);
       } else if(cmdin == "getname"){
@@ -202,7 +214,16 @@ int main (int argc, char *argv[]) {
           cout << "id " << idin << " name is " << nameout << endl;
         }
       } else if(cmdin == "getbid"){
-        
+        int idin;
+        cout << "Input int id: ";
+        cin >> idin;
+        int bidout = maxHeap.getBid(idin);
+        if(bidout == "-1")
+        {
+          cout << "id " << idin << " not found" << endl;
+        } else {
+          cout << "id " << idin << " bid is " << bidout << endl;
+        }
       } else if(cmdin == "winner"){
         User won = scoreboard.pop();
         cout << "Winner of auction is: " << won.getName();
@@ -282,6 +303,13 @@ int main (int argc, char *argv[]) {
         cout << "Input int bid to increase original bid by: ";
         cin >> bidin;
         //update bid here
+        int newBid = maxHeap.updateBid(int idin, int bidin);
+        if(newBid == -1)
+        {
+          cout << "id " << idin << " not found" << endl;
+        } else {
+          cout << "id " << idin << " new bid is " << newBid << endl;
+        }
         //sort
         maxHeap.heapSort(numberOfUsers);
       } else if(cmdin == "getname"){
@@ -296,7 +324,16 @@ int main (int argc, char *argv[]) {
           cout << "id " << idin << " name is " << nameout << endl;
         }
       } else if(cmdin == "getbid"){
-        
+        int idin;
+        cout << "Input int id: ";
+        cin >> idin;
+        int bidout = maxHeap.getBid(idin);
+        if(bidout == "-1")
+        {
+          cout << "id " << idin << " not found" << endl;
+        } else {
+          cout << "id " << idin << " bid is " << bidout << endl;
+        }
       } else if(cmdin == "winner"){
         User won = scoreboard.pop();
         cout << "Winner of auction is: " << won.getName();
