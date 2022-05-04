@@ -120,7 +120,6 @@ User Heaparr::pop(){
 
 User Heaparr::popRandom(){
     if (maxHeap.size() > 0) {
-        //std::cout <<maxHeap.at(0).name<<"\t"<<maxHeap.at(0).amount<< "\n ";
         int randNum = rand()%(maxHeap.size() - 0 + 1) + 0;
         User tmp = maxHeap.at(randNum);
         maxHeap.erase(maxHeap.begin()+randNum);
@@ -142,14 +141,14 @@ int getBid(int id)
     return -1;
 }
 
-int updateBid(int id)
+int updateBid(int id, int valuein)
 {
     for(int i = 0; i < maxHeap.size(); i++)
     {
         if(maxHeap.at(i).id == id)
         {
             //std::cout <<maxHeap.at(i).name<<"\t"<<maxHeap.at(i).amount<< "\n ";
-            maxHeap.at(i).addBid(bid_value);
+            maxHeap.at(i).addBid(valuein);
             return maxHeap.at(i).amount;
         }
     }
