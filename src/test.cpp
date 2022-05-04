@@ -27,6 +27,8 @@ enum InputCodes
     PROFIT = 6, //added
     DELETE = 7,
     DELETERANDOM = 8,
+    GETNAME = 9,
+    GETBID = 10,
 };
 
 int determineCurrentCommand(string command)
