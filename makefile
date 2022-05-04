@@ -7,7 +7,7 @@ EXECUTABLES := btest \
 runme \
 test
 
-OBJECTS := main.o \
+OBJECTS := Main.o \
 BinaryTree.o \
 Maxheap.o \
 User.o \ 
@@ -44,8 +44,8 @@ test: $(OBJTEST)
 	g++ -g $(OBJTEST) -o $@
 
 # Specify how the object files should be created from source files
-main.o: $(SRCPATH)main.cpp 
-	$(CFLAGS)main.cpp -o $@
+Main.o: $(SRCPATH)Main.cpp 
+	$(CFLAGS)Main.cpp -o $@
 
 BinaryTree.o:	$(SRCPATH)BinaryTree.cpp $(HEADERPATH)BinaryTree.h
 	$(CFLAGS)BinaryTree.cpp -o $@
