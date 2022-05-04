@@ -39,7 +39,7 @@ runme:	$(OBJECTS)
 test: $(OBJTEST)
 	g++ -g $(OBJTEST) -o $@
 	
-inputGenerator: inputGenerator.cpp
+inputGenerator: $(SRCPATH)inputGenerator.cpp
 	g++ -g inputGenerator -o $@
 
 # Specify how the object files should be created from source files
@@ -73,18 +73,11 @@ ri: runme testInput.txt
 #below command commented out because ./runme needs commandline args
 #rd: runme
 #	gdb ./runme
-#Tests for Binary Tree
-binaryTreeTest.o: $(SRCPATH)binaryTreeTest.cpp
-	$(CFLAGS)binaryTreeTest.cpp -o $@
-
-
-btest: BinaryTreeNode.o BinaryTree.o User.o binaryTreeTest.o
-	g++ -g BinaryTree.o BinaryTreeNode.o User.o binaryTreeTest.o -o $@
 
 # Specify the object files and executables that are generated
 # and need to be removed to re-compile the whole thing
 clean:
-	rm -f *.o $(OBJECTS) $(EXECUTABLES)
+	rm -f *.o $(OBJECTS) $(EXECUTABLES) test.o inputGenerator.o
 
 wipeScreen:
 	clear
