@@ -30,14 +30,14 @@ int main (int argc, char *argv[]) {
       int randNum = rand()%6;
       if(randNum == 0) {
         //add
-        cout << "add" << endl;
+        //cout << "add" << endl;
         outfile << "add " << namesarr[rand()%20] << " " << rand()%10000 << endl;
         totnum++;
       } else if(randNum == 1) {
         //assassinate
 				if(totnum > 0)
 				{
-					cout << "assassinate" << endl;
+					//cout << "assassinate" << endl;
 					outfile << "assassinate " << rand()%totnum << endl;
 					totnum--;
 				} else {
@@ -47,7 +47,7 @@ int main (int argc, char *argv[]) {
         //bid
 				if(totnum > 0)
 				{
-					cout << "bid" << endl;
+					//cout << "bid" << endl;
 					outfile << "bid " << rand()%totnum << rand()%10000 << endl;
 				} else {
 					i--;
@@ -56,7 +56,7 @@ int main (int argc, char *argv[]) {
         //getname
 				if(totnum > 0)
 				{
-					cout << "getname" << endl;
+					//cout << "getname" << endl;
 					outfile << "getname " << rand()%totnum << endl;
 				} else {
 					i--;
@@ -65,7 +65,7 @@ int main (int argc, char *argv[]) {
         //getbid
 				if(totnum > 0)
 				{
-					cout << "getbid" << endl;
+					//cout << "getbid" << endl;
 					outfile << "getbid " << rand()%totnum << endl;
 				} else {
 					i--;
@@ -74,14 +74,14 @@ int main (int argc, char *argv[]) {
         //scoreboard
 	      if(totnum > 0)
 	      {
-					cout << "scoreboard" << endl;
+					//cout << "scoreboard" << endl;
 					outfile << "scoreboard " << rand()%totnum << endl;
 				} else {
 					i--;
 				}
       }
 		}
-		cout << "winner" << endl;
+		//cout << "winner" << endl;
     outfile << "winner" << endl;
 		outfile.close();
 	} else {
