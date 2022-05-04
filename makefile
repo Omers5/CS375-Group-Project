@@ -13,7 +13,7 @@ Maxheap.o \
 User.o \ 
 ProbeHash.o \
 LinkedList.o \
-HashTemplate.o \
+HashTemplate.o
 
 OBJTEST := test.o \
 BinaryTree.o \
@@ -21,14 +21,14 @@ Maxheap.o \
 User.o \ 
 ProbeHash.o \
 LinkedList.o \
-HashTemplate.o \
+HashTemplate.o
 
 HEADERS := BinaryTree.h \
 Maxheap.h \
 User.h \
 LinkedList.h \
 ProbeHash.h \
-HashTemplate.h \
+HashTemplate.h
 
 all:	runme
 
