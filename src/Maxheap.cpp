@@ -95,11 +95,15 @@ void Heaparr::print(int k){
 }
 
 User Heaparr::popid(int id){
-    if (maxHeap.size() > 0 && id < maxHeap.size()) {
-        std::cout <<maxHeap.at(id).name<<"\t"<<maxHeap.at(id).amount<< "\n ";
-        User tmp = maxHeap.at(id);
-        maxHeap.erase(maxHeap.begin());
-        return tmp;
+    for(int i = 0; i < maxHeap.size(); i++)
+    {
+        if(maxHeap.at(i).id == id)
+        {
+            //std::cout <<maxHeap.at(i).name<<"\t"<<maxHeap.at(i).amount<< "\n ";
+            User tmp = maxHeap.at(i);
+            maxHeap.erase(maxHeap.begin()+i);
+            return tmp;
+        }
     }
     return User();
 }
@@ -116,11 +120,38 @@ User Heaparr::pop(){
 
 User Heaparr::popRandom(){
     if (maxHeap.size() > 0) {
-        std::cout <<maxHeap.at(0).name<<"\t"<<maxHeap.at(0).amount<< "\n ";
+        //std::cout <<maxHeap.at(0).name<<"\t"<<maxHeap.at(0).amount<< "\n ";
         int randNum = rand()%(maxHeap.size() - 0 + 1) + 0;
         User tmp = maxHeap.at(randNum);
         maxHeap.erase(maxHeap.begin()+randNum);
         return tmp;
     }
     return User();
+}
+
+int getBid(int id)
+{
+    for(int i = 0; i < maxHeap.size(); i++)
+    {
+        if(maxHeap.at(i).id == id)
+        {
+            //std::cout <<maxHeap.at(i).name<<"\t"<<maxHeap.at(i).amount<< "\n ";
+            return maxHeap.at(i).amount;
+        }
+    }
+    return -1;
+}
+
+int updateBid(int id)
+{
+    for(int i = 0; i < maxHeap.size(); i++)
+    {
+        if(maxHeap.at(i).id == id)
+        {
+            //std::cout <<maxHeap.at(i).name<<"\t"<<maxHeap.at(i).amount<< "\n ";
+            maxHeap.at(i).addBid(bid_value);
+            return maxHeap.at(i).amount;
+        }
+    }
+    return -1;
 }
