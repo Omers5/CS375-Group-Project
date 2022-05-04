@@ -97,7 +97,7 @@ int main (int argc, char *argv[]) {
       getline(iss, idin, ' ');
       getline(iss, bidin, ' ');
       //update bid here
-      int newBid = maxHeap.updateBid(stoi(idin), bidin);
+      int newBid = maxHeap.updateBid(stoi(idin), stoi(bidin));
       if(newBid == -1)
       {
         cout << "id " << idin << " not found" << endl;
@@ -190,7 +190,7 @@ int main (int argc, char *argv[]) {
       } else {
         userOut =  maxHeap2.popid(stoi(cmdin));
       }
-      string nout = to_string(hashLinked->assassinateBidder(stoi(userOut.name)));
+      string nout = to_string(hashLinked->assassinateBidder(userOut.name));
       cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
       //sort
       numberOfUsers--;
@@ -201,7 +201,7 @@ int main (int argc, char *argv[]) {
       getline(iss, idin, ' ');
       getline(iss, bidin, ' ');
       //update bid here
-      int newBid = maxHeap2.updateBid(idin, bidin);
+      int newBid = maxHeap2.updateBid(stoi(idin), bidin);
       if(newBid == -1)
       {
         cout << "id " << idin << " not found" << endl;
@@ -213,7 +213,7 @@ int main (int argc, char *argv[]) {
     } else if(cmdin == "getname"){
       string idin;
       getline(iss, idin, ' ');
-      string nameout = hashLinked->getBidderName(idin);
+      string nameout = hashLinked->getBidderName(stoi(idin));
       if(nameout == "-1")
       {
         cout << "id " << idin << " not found" << endl;
@@ -223,7 +223,7 @@ int main (int argc, char *argv[]) {
     } else if(cmdin == "getbid"){
       string idin;
       getline(iss, idin, ' ');
-      int bidout = maxHeap2.getBid(idin);
+      int bidout = maxHeap2.getBid(stoi(idin));
       if(bidout == -1)
       {
         cout << "id " << idin << " not found" << endl;
@@ -241,8 +241,8 @@ int main (int argc, char *argv[]) {
       //delete hashLinked;
       i = commandsin.size();
     } else if(cmdin == "scoreboard"){
-      string amount;
-      getline(iss, amount, ' ');
+      string k;
+      getline(iss, k, ' ');
       cout << "\nSCOREBOARD";
       cout << "\n-----------------\n";
       maxHeap2.print(k);
@@ -257,13 +257,13 @@ int main (int argc, char *argv[]) {
   start = chrono::system_clock::now();
   HashTable<BinaryTree> *hashTree = new HashTable<BinaryTree>(TABLESIZE);
   Heaparr maxHeap3;
-  int idhold = 1;
-  int numberOfUsers = 0;
+  idhold = 1;
+  numberOfUsers = 0;
   for(int i = 0; i < commandsin.size(); i++)
   {
     istringstream iss(line);
-    string hold;
-    getline(iss, hold, ' ');
+    string cmdin;
+    getline(iss, cmdin, ' ');
     if(cmdin == "add"){
       //get bidder name and value
       string namein;
@@ -295,7 +295,7 @@ int main (int argc, char *argv[]) {
       } else {
         userOut =  maxHeap3.popid(stoi(cmdin));
       }
-      string nout = to_string(hashTree->assassinateBidder(stoi(userOut.name)));
+      string nout = hashTree->assassinateBidder(stoi(userOut.name));
       cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
       //sort
       numberOfUsers--;
@@ -306,7 +306,7 @@ int main (int argc, char *argv[]) {
       getline(iss, idin, ' ');
       getline(iss, bidin, ' ');
       //update bid here
-      int newBid = maxHeap3.updateBid(idin, bidin);
+      int newBid = maxHeap3.updateBid(stoi(idin), bidin);
       if(newBid == -1)
       {
         cout << "id " << idin << " not found" << endl;
@@ -318,7 +318,7 @@ int main (int argc, char *argv[]) {
     } else if(cmdin == "getname"){
       string idin;
       getline(iss, idin, ' ');
-      string nameout = hashTree->getBidderName(idin);
+      string nameout = hashTree->getBidderName(stoi(idin));
       if(nameout == "-1")
       {
         cout << "id " << idin << " not found" << endl;
@@ -328,7 +328,7 @@ int main (int argc, char *argv[]) {
     } else if(cmdin == "getbid"){
       string idin;
       getline(iss, idin, ' ');
-      int bidout = maxHeap3.getBid(idin);
+      int bidout = maxHeap3.getBid(stoi(idin));
       if(bidout == -1)
       {
         cout << "id " << idin << " not found" << endl;
@@ -346,8 +346,8 @@ int main (int argc, char *argv[]) {
       //delete hashTree;
       i = commandsin.size();
     } else if(cmdin == "scoreboard"){
-      string amount;
-      getline(iss, amount, ' ');
+      string k;
+      getline(iss, k, ' ');
       cout << "\nSCOREBOARD";
       cout << "\n-----------------\n";
       maxHeap3.print(k);
