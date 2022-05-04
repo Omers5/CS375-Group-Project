@@ -31,7 +31,7 @@ int main (int argc, char *argv[]) {
       if(randNum == 0) {
         //add
         
-        outfile << "add " << namesarr[rand()%namesarr.size()] << " " << rand()%10000 << endl;
+        outfile << "add " << namesarr[rand()%20] << " " << rand()%10000 << endl;
         totnum++;
       } else if(randNum == 1) {
         //assassinate
