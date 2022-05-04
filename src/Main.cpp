@@ -19,7 +19,7 @@
 #include "ProbeHash.h"
 
 const int TABLESIZE = 10;
-const string COUTCMDS = "Please input a command from the following list:\n\t\"add\" - adds bidder\n\t\"assassinate\" - assassinates bidder\n\t\"bid\" - increase existing bidder bid\n\t\"getname\" - gets name of bidder\n\t\"getbid\" - gets existing bidders bid\n\t\"winner\" - crowns a winner and exits\n\t\"exit\" - exits without crowning winner";
+const string COUTCMDS = "Please input a command from the following list:\n\t\"add\" - adds new bidder\n\t\"assassinate\" - assassinates bidder by id or randomly\n\t\"bid\" - increase existing bidder bid\n\t\"getname\" - gets name of bidder\n\t\"getbid\" - gets existing bidders bid\n\t\"winner\" - crowns a winner and exits\n\t\"exit\" - exits without crowning winner";
 int main (int argc, char *argv[]) {
   int idhold = 1;
   if(argc != 2)
@@ -84,7 +84,9 @@ int main (int argc, char *argv[]) {
       } else if(cmdin == "getbid"){
         
       } else if(cmdin == "winner"){
-        
+        string winout = "";
+        cout << "Winner of auction is: " << winout;
+        lhold = false;
       } else if(cmdin == "exit"){
         cout << "Exiting..." << endl;
         lhold = false;
@@ -149,7 +151,9 @@ int main (int argc, char *argv[]) {
       } else if(cmdin == "get bid"){
         
       } else if(cmdin == "winner"){
-        
+        string winout = "";
+        cout << "Winner of auction is: " << winout;
+        lhold = false;
       } else if(cmdin == "exit"){
         cout << "Exiting..." << endl;
         delete hashLinked;
@@ -215,7 +219,9 @@ int main (int argc, char *argv[]) {
       } else if(cmdin == "get bid"){
         
       } else if(cmdin == "winner"){
-        
+        string winout = "";
+        cout << "Winner of auction is: " << winout;
+        lhold = false;
       } else if(cmdin == "exit"){
         cout << "Exiting..." << endl;
         delete hashTree;
