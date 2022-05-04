@@ -1,17 +1,11 @@
 # CS375-Group-Project
 
 ./runme:
-
 main file takes 1 argument (in range of 1-3, inclusive), and creates a hash table based on inputted argument, then allows user command-line control of the system.
-
   1 = linear probing
-  
   2 = buckets containing linked list
-  
   3 = buckets containing BST
-  
 "make all" to make the main executable file
-
 "./runme <1,2,3>" to run the main executable file
 
 
