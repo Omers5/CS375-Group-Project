@@ -21,13 +21,13 @@ class HashTable
 		}
 		//this should be also used for assassinateRandomBidder
 		//	id for this should be sent from id that was removed from heap
-		void assassinateBidder(int id)
+		string assassinateBidder(int id)
 		{
-			Table[id%tableSize].remove(id);
+			return Table[id%tableSize].remove(id);
 		}
-		void getBidderName(int id)
+		string getBidderName(int id)
 		{
-			Table[id%tableSize].getName(id);
+			return Table[id%tableSize].getName(id);
 		}
 			
 		
