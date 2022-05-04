@@ -80,7 +80,7 @@ ri: runme testInput.txt
 # Specify the object files and executables that are generated
 # and need to be removed to re-compile the whole thing
 clean:
-	rm -f *.o $(OBJECTS) $(EXECUTABLES) test.o inputGenerator.o
+	rm -f *.o $(OBJECTS) $(EXECUTABLES) test.o inputGenerator.o inputGenerator
 
 wipeScreen:
 	clear
