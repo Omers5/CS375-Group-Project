@@ -19,6 +19,7 @@
 #include "ProbeHash.h"
 
 const int TABLESIZE = 10;
+const string COUTCMDS = "Please input a command from the following list:\n\t\"add\" - adds bidder\n\t\"assassinate\" - assassinates bidder\n\t\"bid\" - increase existing bidder bid\n\t\"getname\" - gets name of bidder\n\t\"getbid\" - gets existing bidders bid\n\t\"winner\" - crowns a winner and exits\n\texit";
 int main (int argc, char *argv[]) {
   int idhold = 1;
   if(argc != 2)
@@ -33,12 +34,12 @@ int main (int argc, char *argv[]) {
     PHashTable hashT(TABLESIZE);
     Heaparr maxHeap;
     bool lhold = true;
-    cout << "Please input a command from the following list:\n\tadd bidder\n\tassassinate\n\tbid\n\tget name\n\tget bid\n\twinner\n\texit" << endl;
+    cout << COUTCMDS << endl;
     while (lhold) {
       string cmdin;
       cout << "cmd: ";
       cin >> cmdin;
-      if(cmdin == "add bidder"){
+      if(cmdin == "add"){
         //get bidder name and value
         string namein;
         int bidin;
@@ -69,7 +70,7 @@ int main (int argc, char *argv[]) {
         cout << "Input int bid to increase original bid by: ";
         cin >> bidin;
         //update bid here
-      } else if(cmdin == "get name"){
+      } else if(cmdin == "getname"){
         int idin;
         cout << "Input int id: ";
         cin >> idin;
@@ -80,7 +81,7 @@ int main (int argc, char *argv[]) {
         } else {
           cout << "id " << idin << " name is " << nameout << endl;
         }
-      } else if(cmdin == "get bid"){
+      } else if(cmdin == "getbid"){
         
       } else if(cmdin == "winner"){
         
@@ -88,7 +89,7 @@ int main (int argc, char *argv[]) {
         cout << "Exiting..." << endl;
         lhold = false;
       } else {
-        cout << "Unknown command. Command received: \"" << cmdin << "\".\nPlease input a command from the following list:\n\tadd bidder\n\tassassinate\n\tbid\n\tget name\n\tget bid\n\twinner\n\texit" << endl;
+        cout << "Unknown command. Command received: \"" << cmdin << "\".\n" << COUTCMDS << endl;
       }
       
     }
@@ -98,7 +99,7 @@ int main (int argc, char *argv[]) {
     HashTable<LinkedList> *hashLinked = new HashTable<LinkedList>(TABLESIZE);
     Heaparr maxHeap;
     bool lhold = true;
-    cout << "Please input a command from the following list:\n\tadd bidder\n\tassassinate\n\tbid\n\tget name\n\tget bid\n\twinner\n\texit" << endl;
+    cout << COUTCMDS << endl;
     while (lhold) {
       string cmdin;
       cout << "cmd: ";
@@ -154,7 +155,7 @@ int main (int argc, char *argv[]) {
         delete hashLinked;
         lhold = false;
       } else {
-        cout << "Unknown command. Command received: \"" << cmdin << "\".\nPlease input a command from the following list:\n\tadd bidder\n\tassassinate\n\tbid\n\tget name\n\tget bid\n\twinner\n\texit" << endl;
+        cout << "Unknown command. Command received: \"" << cmdin << "\".\n" << COUTCMDS << endl;
       }
       
     }
@@ -164,7 +165,7 @@ int main (int argc, char *argv[]) {
     HashTable<BinaryTree> *hashTree = new HashTable<BinaryTree>(TABLESIZE);
     Heaparr maxHeap;
     bool lhold = true;
-    cout << "Please input a command from the following list:\n\tadd bidder\n\tassassinate\n\tbid\n\tget name\n\tget bid\n\twinner\n\texit" << endl;
+    cout << COUTCMDS << endl;
     while (lhold) {
       string cmdin;
       cout << "cmd: ";
@@ -220,7 +221,7 @@ int main (int argc, char *argv[]) {
         delete hashTree;
         lhold = false;
       } else {
-        cout << "Unknown command. Command received: \"" << cmdin << "\".\nPlease input a command from the following list:\n\tadd bidder\n\tassassinate\n\tbid\n\tget name\n\tget bid\n\twinner\n\texit" << endl;
+        cout << "Unknown command. Command received: \"" << cmdin << "\".\n" << COUTCMDS << endl;
       }
       
     }
