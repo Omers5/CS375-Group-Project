@@ -72,7 +72,7 @@ int main (int argc, char *argv[]) {
         } else {
           userOut =  maxHeap.popid(stoi(cmdin));
         }
-        string nout = stoi(hashT.assassinateBidder(stoi(userOut.name)));
+        string nout = to_string(hashT.assassinateBidder(stoi(userOut.name)));
         cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
         //sort
         numberOfUsers--;
