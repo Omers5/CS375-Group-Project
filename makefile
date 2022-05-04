@@ -38,6 +38,9 @@ runme:	$(OBJECTS)
 #		while running the same commands with same inputs
 test: $(OBJTEST)
 	g++ -g $(OBJTEST) -o $@
+	
+inputGenerator: inputGenerator.cpp
+	g++ -g inputGenerator -o $@
 
 # Specify how the object files should be created from source files
 Main.o: $(SRCPATH)Main.cpp $(HEADERPATH)HashTemplate.h $(HEADERPATH)LinkedList.h
