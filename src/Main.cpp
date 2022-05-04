@@ -121,7 +121,6 @@ int main (int argc, char *argv[]) {
         User won = maxHeap.pop();
         string name = hashT.getBidderName(stoi(won.getName()));
         cout << "Winner of auction is " << name << " with id " << won.getName();
-        delete hashTree;
         lhold = false;
       } else if(cmdin == "exit"){
         cout << "Exiting..." << endl;
@@ -231,7 +230,7 @@ int main (int argc, char *argv[]) {
         User won = maxHeap.pop();
         string name = hashLinked->getBidderName(stoi(won.getName()));
         cout << "Winner of auction is " << name << " with id " << won.getName();
-        delete hashTree;
+        delete hashLinked;
         lhold = false;
       } else if(cmdin == "exit"){
         cout << "Exiting..." << endl;
