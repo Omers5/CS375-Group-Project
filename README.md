@@ -1,6 +1,6 @@
 # CS375-Group-Project
 
-./runme:
+./test:
 
 main file takes 1 argument (in range of 1-3, inclusive), and creates a hash table based on inputted argument, then allows user command-line control of the system.
 
@@ -10,19 +10,19 @@ main file takes 1 argument (in range of 1-3, inclusive), and creates a hash tabl
   
   3 = buckets containing BST
   
-"make all" to make the main executable file
+"make test" to make the main executable file
 
-"./runme <1,2,3>" to run the main executable file
+"./test <1,2,3>" to run the main executable file
 
 
 
-./test:
+./runme:
 
 test file takes 1 argument (input file name), creates 1 heap and 1 of each hash table (meaning 3 hash tables), runs the same tests from input file on each hash table, and outputs the time taken by each test on each hash table.
 
-"make test" to make the test executable file
+"make all" to make the test executable file
 
-"./test <input_file_name>" to run test executable file
+"./runme <input_file_name>" to run test executable file
 
 
 
