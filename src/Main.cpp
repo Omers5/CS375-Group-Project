@@ -51,6 +51,8 @@ int main (int argc, char *argv[]) {
   Heaparr maxHeap;
   int idhold = 1;
   int numberOfUsers = 0;
+  int pInserts = 0; //counts total number of inserts
+  int pMisses = 0; //counts total number of insert misses
   for(int i = 0; i < commandsin.size(); i++)
   {
     istringstream iss(line);
@@ -66,15 +68,23 @@ int main (int argc, char *argv[]) {
       int idin = idhold;
       idhold++;
       //input data into maxheap and hashtable
-      hashT.addBidder(namein, idin);
-      User userin(to_string(idin));
-      userin.amount = stoi(bidin);
-      int iout = maxHeap.insert(userin);
-      numberOfUsers++;
-      maxHeap.heapSort(numberOfUsers);
-      //output id
-	    if(BOOLPRINTCMDS)
-      	cout << "User " << namein << " with bid " << bidin << " created with id " << idin << endl;
+      int addOut = hashT.addBidder(namein, idin);
+      pInserts++;
+      if(addOut != -1)
+      {
+        User userin(to_string(idin));
+        userin.amount = stoi(bidin);
+        int iout = maxHeap.insert(userin);
+        numberOfUsers++;
+        maxHeap.heapSort(numberOfUsers);
+        //output id
+        if(BOOLPRINTCMDS)
+          cout << "User " << namein << " with bid " << bidin << " created with id " << idin << endl;
+      } else {
+        pMisses++;
+        if(BOOLPRINTCMDS)
+          cout << "User " << namein << " with bid " << bidin << " failed to be created" << endl;
+      }
 
     } else if(cmdin == "assassinate"){
       //cout << "Input \"random\" or int id: ";
@@ -161,6 +171,7 @@ int main (int argc, char *argv[]) {
   end = chrono::system_clock::now();
   //print time here
   cout << "Linear probing total time: " << ((float)chrono::duration_cast<chrono::microseconds>(end-start).count())/1000 << " milliseconds" << endl;
+  cout << "Linear probing misses/total: " << pMisses << "/" << pInserts << endl;
   //run and time commands on linked list hashtable
   cout << "Starting hash table with linked list" << endl;
   start = chrono::system_clock::now();
