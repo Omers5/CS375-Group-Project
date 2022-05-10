@@ -94,10 +94,10 @@ void Heaparr::print(int k){
     //put everything back to heap
 }
 
-User Heaparr::popid(int id){
+User Heaparr::popid(string namein){
     for(int i = 0; i < maxHeap.size(); i++)
     {
-        if(stoi(maxHeap.at(i).name) == id)
+        if(maxHeap.at(i).name == namein)
         {
             //std::cout <<maxHeap.at(i).name<<"\t"<<maxHeap.at(i).amount<< "\n ";
             User tmp = maxHeap.at(i);
