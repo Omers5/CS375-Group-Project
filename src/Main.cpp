@@ -101,12 +101,12 @@ int main (int argc, char *argv[]) {
       {
         userOut = maxHeap.popRandom();
       } else {
-        userOut =  maxHeap.popid(stoi(idorrand));
+        userOut =  maxHeap.popid(idorrand);
       }
 	    if(userOut.name != "")
 	    {
 		    //cout << userOut.name << endl;
-	      string nout = to_string(hashT.assassinateBidder(userOut.name));
+	      string nout = to_string(hashT.assassinateBidder(stoi(userOut.name)));
 		    //cout << nout << endl;
 	      if(BOOLPRINTCMDS)
 					cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
@@ -117,7 +117,6 @@ int main (int argc, char *argv[]) {
 				if(BOOLPRINTCMDS)
 					cout << "Failed to find bidder with id " << idorrand << endl;
 			}
-		}
     } else if(cmdin == "bid"){
       string idin;
       string bidin;
