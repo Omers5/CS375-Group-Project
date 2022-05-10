@@ -94,7 +94,9 @@ int main (int argc, char *argv[]) {
       getline(iss, idorrand, ' ');
       //assassinate here
       User userOut;
-	    idorrand.erase(remove(idorrand.begin(), idorrand.end(), '\n'), idorrand.end());
+	    if (!idorrand.empty() && idorrand[idorrand.length()-1] == '\n') {
+        idorrand.erase(idorrand.length()-1);
+      }
 	    cout << idorrand << endl;
       if(idorrand == "random")
       {
