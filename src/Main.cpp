@@ -58,8 +58,8 @@ int main (int argc, char *argv[]) {
     istringstream iss(commandsin[i]);
     string cmdin;
     getline(iss, cmdin, ' ');
-	  //if(BOOLPRINTCMDS)
-		//  cout << cmdin << endl;
+	  if(BOOLPRINTCMDS)
+		  cout << cmdin << endl;
     if(cmdin == "add"){
       //get bidder name and value
       string namein;
