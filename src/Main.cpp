@@ -94,12 +94,13 @@ int main (int argc, char *argv[]) {
       getline(iss, idorrand, ' ');
       //assassinate here
       User userOut;
+	    idorrand.erase(remove(idorrand.begin(), idorrand.end(), '\n'), idorrand.end());
 	    cout << idorrand << endl;
       if(idorrand == "random")
       {
         userOut = maxHeap.popRandom();
       } else {
-        userOut =  maxHeap.popid(atoi(idorrand));
+        userOut =  maxHeap.popid(stoi(idorrand));
       }
 	    cout << userOut.name << endl;
       string nout = to_string(hashT.assassinateBidder(stoi(userOut.name)));
