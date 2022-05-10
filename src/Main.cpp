@@ -99,7 +99,7 @@ int main (int argc, char *argv[]) {
       {
         userOut = maxHeap.popRandom();
       } else {
-        userOut =  maxHeap.popid(stoi(idorrand));
+        userOut =  maxHeap.popid(atoi(idorrand));
       }
 	    cout << userOut.name << endl;
       string nout = to_string(hashT.assassinateBidder(stoi(userOut.name)));
