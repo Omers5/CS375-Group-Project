@@ -94,15 +94,15 @@ int main (int argc, char *argv[]) {
       getline(iss, idorrand, ' ');
       //assassinate here
       User userOut;
-      if(cmdin == "random")
+      if(idorrand == "random")
       {
         userOut = maxHeap.popRandom();
       } else {
         userOut =  maxHeap.popid(stoi(cmdin));
       }
-	    cout << userOut.name << endl;
+	    //cout << userOut.name << endl;
       string nout = to_string(hashT.assassinateBidder(stoi(userOut.name)));
-	    cout << nout << endl;
+	    //cout << nout << endl;
       if(BOOLPRINTCMDS)
       	cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
       //sort
