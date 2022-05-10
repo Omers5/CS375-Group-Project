@@ -59,7 +59,7 @@ int main (int argc, char *argv[]) {
     string cmdin;
     getline(iss, cmdin, ' ');
 	  if(BOOLPRINTCMDS)
-		  cout << cmdin << endl;
+		  cout << line << cmdin << endl;
     if(cmdin == "add"){
       //get bidder name and value
       string namein;
