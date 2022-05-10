@@ -22,7 +22,7 @@
 using namespace std;
 
 const int TABLESIZE = 10;
-const bool BOOLPRINTCMDS = true;
+const bool BOOLPRINTCMDS = false;
 
 int main (int argc, char *argv[]) {
   if(argc != 2)
