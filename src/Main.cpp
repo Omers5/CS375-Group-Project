@@ -95,9 +95,7 @@ int main (int argc, char *argv[]) {
       //assassinate here
       User userOut;
 	    cout << idorrand.length() << endl;
-	    if (!idorrand.empty() && idorrand[idorrand.length()-1] == '\n') {
-        idorrand.erase(idorrand.length()-1);
-      }
+	    stoi(idorrand);
 	    cout << idorrand << endl;
       if(idorrand == "random")
       {
