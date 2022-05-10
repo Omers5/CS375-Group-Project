@@ -98,7 +98,7 @@ int main (int argc, char *argv[]) {
       {
         userOut = maxHeap.popRandom();
       } else {
-        userOut =  maxHeap.popid(stoi(cmdin));
+        userOut =  maxHeap.popid(stoi(idorrand));
       }
 	    //cout << userOut.name << endl;
       string nout = to_string(hashT.assassinateBidder(stoi(userOut.name)));
@@ -214,11 +214,11 @@ int main (int argc, char *argv[]) {
       getline(iss, idorrand, ' ');
       //assassinate here
       User userOut;
-      if(cmdin == "random")
+      if(idorrand == "random")
       {
         userOut = maxHeap2.popRandom();
       } else {
-        userOut =  maxHeap2.popid(stoi(cmdin));
+        userOut =  maxHeap2.popid(stoi(idorrand));
       }
       string nout = hashLinked->assassinateBidder(stoi(userOut.name));
       if(BOOLPRINTCMDS)
@@ -332,11 +332,11 @@ int main (int argc, char *argv[]) {
       getline(iss, idorrand, ' ');
       //assassinate here
       User userOut;
-      if(cmdin == "random")
+      if(idorrand == "random")
       {
         userOut = maxHeap3.popRandom();
       } else {
-        userOut =  maxHeap3.popid(stoi(cmdin));
+        userOut =  maxHeap3.popid(stoi(idorrand));
       }
       string nout = hashTree->assassinateBidder(stoi(userOut.name));
       if(BOOLPRINTCMDS)
