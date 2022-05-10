@@ -71,7 +71,7 @@ int main (int argc, char *argv[]) {
         {
           userOut = maxHeap.popRandom();
         } else {
-          userOut =  maxHeap.popid(stoi(cmdin));
+          userOut =  maxHeap.popid(cmdin);
         }
         string nout = to_string(hashT.assassinateBidder(stoi(userOut.name)));
         cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
@@ -180,7 +180,7 @@ int main (int argc, char *argv[]) {
         {
           userOut = maxHeap.popRandom();
         } else {
-          userOut =  maxHeap.popid(stoi(cmdin));
+          userOut =  maxHeap.popid(cmdin);
         }
         string nout = hashLinked->assassinateBidder(stoi(userOut.name));
         cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
@@ -291,7 +291,7 @@ int main (int argc, char *argv[]) {
         {
           userOut = maxHeap.popRandom();
         } else {
-          userOut =  maxHeap.popid(stoi(cmdin));
+          userOut =  maxHeap.popid(cmdin);
         }
         string nout = hashTree->assassinateBidder(stoi(userOut.name));
         cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
