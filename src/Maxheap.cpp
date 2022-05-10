@@ -110,7 +110,7 @@ User Heaparr::popid(string namein){
 
 User Heaparr::pop(){
     if (maxHeap.size() > 0) {
-        std::cout <<maxHeap.at(0).name<<"\t"<<maxHeap.at(0).amount<< "\n ";
+        //std::cout <<maxHeap.at(0).name<<"\t"<<maxHeap.at(0).amount<< "\n ";
         User tmp = maxHeap.at(0);
         maxHeap.erase(maxHeap.begin());
         return tmp;
