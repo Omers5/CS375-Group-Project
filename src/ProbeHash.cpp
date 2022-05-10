@@ -43,7 +43,7 @@ int PHashTable::findBidder(int id)
 			//Bidder cannot exist
 		//	return -1;
 		//}
-		/*else*/ if(hash_vect.at(i).id = id)
+		/*else*/ if(hash_vect.at(i).id == id && hash_vect.at(i).STATE != "DELETED" && hash_vect.at(i).STATE != "NULL")
 		{
 			return i;
 		}
@@ -58,11 +58,11 @@ int PHashTable::assassinateBidder(int id)
 {
 	int i = findBidder(id);
 	
-	if(i < 0)
+	if(i < 0 || hash_vect.at(i).STATE ==  "DELETED" || hash_vect.at(i).STATE == "NULL")
 		return i;
 	else
 	{
-		hash_vect.at(i).STATE == "DELETED";
+		hash_vect.at(i).STATE = "DELETED";
 		return i;
 	}
 }
