@@ -103,14 +103,21 @@ int main (int argc, char *argv[]) {
       } else {
         userOut =  maxHeap.popid(stoi(idorrand));
       }
-	    cout << userOut.name << endl;
-      string nout = to_string(hashT.assassinateBidder(stoi(userOut.name)));
-	    cout << nout << endl;
-      if(BOOLPRINTCMDS)
-      	cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
-      //sort
-      numberOfUsers--;
-      maxHeap.heapSort(numberOfUsers);
+	    if(userOut.name != "")
+	    {
+		    //cout << userOut.name << endl;
+	      string nout = to_string(hashT.assassinateBidder(userOut.name));
+		    //cout << nout << endl;
+	      if(BOOLPRINTCMDS)
+					cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
+	      //sort
+	      numberOfUsers--;
+	      maxHeap.heapSort(numberOfUsers);
+			} else {
+				if(BOOLPRINTCMDS)
+					cout << "Failed to find bidder with id " << idorrand << endl;
+			}
+		}
     } else if(cmdin == "bid"){
       string idin;
       string bidin;
@@ -221,14 +228,20 @@ int main (int argc, char *argv[]) {
       {
         userOut = maxHeap2.popRandom();
       } else {
-        userOut =  maxHeap2.popid(stoi(idorrand));
+        userOut =  maxHeap2.popid(idorrand);
       }
-      string nout = hashLinked->assassinateBidder(stoi(userOut.name));
-      if(BOOLPRINTCMDS)
-      	cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
-      //sort
-      numberOfUsers--;
-      maxHeap2.heapSort(numberOfUsers);
+			if(userOut.name != "")
+			{
+				string nout = hashLinked->assassinateBidder(stoi(userOut.name));
+				if(BOOLPRINTCMDS)
+					cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
+				//sort
+				numberOfUsers--;
+				maxHeap2.heapSort(numberOfUsers);
+			} else {
+				if(BOOLPRINTCMDS)
+					cout << "Failed to assassinate bidder with id " << idorrand << endl;
+			}
     } else if(cmdin == "bid"){
       string idin;
       string bidin;
@@ -339,14 +352,20 @@ int main (int argc, char *argv[]) {
       {
         userOut = maxHeap3.popRandom();
       } else {
-        userOut =  maxHeap3.popid(stoi(idorrand));
+        userOut =  maxHeap3.popid(idorrand);
       }
-      string nout = hashTree->assassinateBidder(stoi(userOut.name));
-      if(BOOLPRINTCMDS)
-      	cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
-      //sort
-      numberOfUsers--;
-      maxHeap3.heapSort(numberOfUsers);
+			if(userOut.name != "")
+			{
+				string nout = hashTree->assassinateBidder(stoi(userOut.name));
+				if(BOOLPRINTCMDS)
+					cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
+				//sort
+				numberOfUsers--;
+				maxHeap3.heapSort(numberOfUsers);
+			} else {
+				if(BOOLPRINTCMDS)
+					cout << "Failed to assassinate bidder with id " << userOut.name << endl;
+			}
     } else if(cmdin == "bid"){
       string idin;
       string bidin;
