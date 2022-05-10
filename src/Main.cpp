@@ -58,8 +58,8 @@ int main (int argc, char *argv[]) {
     istringstream iss(commandsin[i]);
     string cmdin;
     getline(iss, cmdin, ' ');
-	  if(BOOLPRINTCMDS)
-		  cout << line << cmdin << endl;
+	  //if(BOOLPRINTCMDS)
+		//  cout << cmdin << endl;
     if(cmdin == "add"){
       //get bidder name and value
       string namein;
@@ -100,7 +100,9 @@ int main (int argc, char *argv[]) {
       } else {
         userOut =  maxHeap.popid(stoi(cmdin));
       }
+	    cout << userOut.name << endl;
       string nout = to_string(hashT.assassinateBidder(stoi(userOut.name)));
+	    cout << nout << endl;
       if(BOOLPRINTCMDS)
       	cout << "Assassinated bidder " << nout << " with id " << userOut.name << " with bid value " << userOut.amount << endl;
       //sort
