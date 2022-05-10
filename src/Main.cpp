@@ -94,9 +94,9 @@ int main (int argc, char *argv[]) {
       getline(iss, idorrand, ' ');
       //assassinate here
       User userOut;
-	    cout << idorrand.length() << endl;
-	    stoi(idorrand);
-	    cout << idorrand << endl;
+	    //cout << idorrand.length() << endl;
+	    //stoi(idorrand);
+	    //cout << idorrand << endl;
       if(idorrand == "random")
       {
         userOut = maxHeap.popRandom();
