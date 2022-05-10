@@ -1,0 +1,61 @@
+add Emma 886
+add Evelyn 6915
+add Isabella 8335
+add Elijah 492
+add Sophia 1421
+add Noah 27
+add James 59
+add Emma 3926
+add Liam 3426
+add Benjamin 5736
+add Amelia 5368
+add Charlotte 6429
+bid 2 2862
+assassinate 7
+assassinate 10
+add Noah 3058
+scoreboard 9
+assassinate 8
+assassinate 2
+getname 0
+getname 2
+bid 4 5198
+bid 2 4370
+scoreboard 1
+assassinate 8
+bid 1 6862
+bid 4 7281
+getname 5
+bid 7 336
+scoreboard 6
+getname 1
+scoreboard 4
+getname 6
+getname 6
+getname 2
+bid 3 3750
+assassinate 0
+add Alexander 5788
+add Emma 2651
+bid 1 9932
+add Henry 3368
+assassinate 2
+getbid 0
+add Harper 795
+getbid 4
+getbid 7
+getname 7
+bid 7 492
+getbid 6
+assassinate 0
+bid 1 3865
+scoreboard 1
+scoreboard 4
+getname 0
+assassinate 6
+scoreboard 1
+scoreboard 5
+assassinate 7
+getbid 5
+getname 1
+winner

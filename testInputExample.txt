@@ -1,0 +1,11 @@
+add Emma 886
+add Evelyn 6915
+scoreboard 1
+getbid 0
+getname 1
+bid 1 8690
+assassinate 1
+getbid 0
+add Benjamin 5736
+scoreboard 0
+winner
