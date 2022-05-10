@@ -55,7 +55,7 @@ int main (int argc, char *argv[]) {
   int pMisses = 0; //counts total number of insert misses
   for(int i = 0; i < commandsin.size(); i++)
   {
-    istringstream iss(line);
+    istringstream iss(commandsin[i]);
     string cmdin;
     getline(iss, cmdin, ' ');
 	  if(BOOLPRINTCMDS)
@@ -183,7 +183,7 @@ int main (int argc, char *argv[]) {
   numberOfUsers = 0;
   for(int i = 0; i < commandsin.size(); i++)
   {
-    istringstream iss(line);
+    istringstream iss(commandsin[i]);
     string cmdin;
     getline(iss, cmdin, ' ');
     if(cmdin == "add"){
@@ -301,7 +301,7 @@ int main (int argc, char *argv[]) {
   numberOfUsers = 0;
   for(int i = 0; i < commandsin.size(); i++)
   {
-    istringstream iss(line);
+    istringstream iss(commandsin[i]);
     string cmdin;
     getline(iss, cmdin, ' ');
     if(cmdin == "add"){
