@@ -25,7 +25,7 @@ public:
     
     int getBid(int id);
     int updateBid(int, int);
-    User popid(int id);
+    User popid(string id);
 
     int size;
     vector<User> maxHeap;
