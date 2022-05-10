@@ -38,12 +38,12 @@ int PHashTable::findBidder(int id)
 	
 	for(int j = 0; j < tableSize; j++)
 	{
-		if(hash_vect.at(i).STATE == "NULL")
-		{
+		//if(hash_vect.at(i).STATE == "NULL")
+		//{
 			//Bidder cannot exist
-			return -1;
-		}
-		else if(hash_vect.at(i).id = id)
+		//	return -1;
+		//}
+		/*else*/ if(hash_vect.at(i).id = id)
 		{
 			return i;
 		}
